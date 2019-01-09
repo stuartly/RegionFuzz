@@ -1,2 +1,2 @@
-# NjorthFuzz
-TargetFuzz tool
+# Njorth
+Improvement of AFL
