@@ -81,6 +81,29 @@ make && make install
 
 ```
 
+
+# using TAFL-AllFour
+```
+/*extract weight value*/
+export GET_ALLFOUR=1
+
+mkdir TEMP
+
+CC="Abosute/Path/To/afl-clang-preprocess -outDir=Abosute/Path/To/outDir ./configure --prefix=$PWD/installed --disable-shared
+make -j4 && make install
+
+
+
+/*Instrumentation */
+CC="Abosute/Path/To/afl-clang-fast -DepthFile=Abosute/Path/To/BBAllFour.txt" ./configure --prefix=$PWD/installed --disable-shared
+make && make install
+
+/*Guided fuzzing*/
+./TAFL/afl-fuzz -i in -o out -G BBDepth -d ./bin
+
+```
+
+
 # Using TAFL-NewBranchNum
 ```
 CC=Abosute/Path/To/afl-clang-fast ./configure --prefix=$PWD/installed --disable-shared
