@@ -4818,12 +4818,12 @@ static void show_stats(void) {
                  bSTOP
                  "    path AllFour : "
                  cRST
-                 " %-34.02f"
+                 " %e                      "
                  bSTG
                  bV bSTOP
                  " MaxAllFour : "
                  cRST
-                 "%-8.02f "
+                 "%e "
                  bSTG
                          bV
                  "\n", (double)cur_allFour, (double)max_allFour);

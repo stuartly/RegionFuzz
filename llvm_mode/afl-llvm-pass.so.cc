@@ -108,7 +108,7 @@ static cl::opt <std::string> DepthFile(
 );
 
 static cl::opt <std::string> AllFourFile(
-        "AllFourFileFile",
+        "AllFourFile",
         cl::desc("AllFourFile containing the sum of the four passes."),
         cl::Optional,
         cl::value_desc("AllFourFile"),
