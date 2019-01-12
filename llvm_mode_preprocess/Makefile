@@ -57,7 +57,7 @@ endif
 OUTDIR  =   ..
 
 ifndef AFL_TRACE_PC
-  PROGS      = ../afl-clang-preprocess ../afl-llvm-getMemDensity-pass.so ../afl-llvm-getInstNum-pass.so ../afl-llvm-getEntryDegree-pass.so ../afl-llvm-getDepth-pass.so ../afl-llvm-rt.o ../afl-llvm-rt-32.o ../afl-llvm-rt-64.o
+  PROGS      = ../afl-clang-preprocess ../afl-llvm-getMemDensity-pass.so ../afl-llvm-getInstNum-pass.so ../afl-llvm-getEntryDegree-pass.so ../afl-llvm-getDepth-pass.so ../afl-llvm-getAllFour-pass.so ../afl-llvm-rt.o ../afl-llvm-rt-32.o ../afl-llvm-rt-64.o
 else
   PROGS      = ../afl-clang-preprocess ../afl-llvm-rt.o ../afl-llvm-rt-32.o ../afl-llvm-rt-64.o
 endif
@@ -92,6 +92,9 @@ endif
 	$(CXX) $(CLANG_CFL) -shared $< -o $@ $(CLANG_LFL)
 
 ../afl-llvm-getDepth-pass.so: afl-llvm-getDepth-pass.so.cc | test_deps
+	$(CXX) $(CLANG_CFL) -shared $< -o $@ $(CLANG_LFL)
+
+../afl-llvm-getAllFour-pass.so: afl-llvm-getAllFour-pass.so.cc | test_deps
 	$(CXX) $(CLANG_CFL) -shared $< -o $@ $(CLANG_LFL)
 
 ../afl-llvm-rt.o: afl-llvm-rt.o.c | test_deps

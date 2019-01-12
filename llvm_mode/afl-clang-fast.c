@@ -144,8 +144,8 @@ static void edit_params(u32 argc, char** argv) {
         || !strncmp(cur, "-MemDensityFile", 15)
         || !strncmp(cur, "-InstNumFile",12)
         || !strncmp(cur, "-EntryDegreeFile",16)
-        || !strncmp(cur, "-DepthFile",10)){
-
+        || !strncmp(cur, "-DepthFile",10)
+        || !strncmp(cur, "-AllFourFile",12)){
         cc_params[cc_par_cnt++] = "-mllvm";
     }
 

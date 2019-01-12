@@ -107,6 +107,14 @@ static cl::opt <std::string> DepthFile(
         cl::init("")
 );
 
+static cl::opt <std::string> AllFourFile(
+        "AllFourFileFile",
+        cl::desc("AllFourFile containing the sum of the four passes."),
+        cl::Optional,
+        cl::value_desc("AllFourFile"),
+        cl::init("")
+);
+
 
 namespace {
 
@@ -120,7 +128,8 @@ namespace {
         std::map<std::string, double> bb_to_depth;
         std::map<std::string, double> bb_to_memDensity;   //MemDensity
         std::map<std::string, int> bb_to_instNum;         //InstNum
-        std::map<std::string, double> bb_to_entryDegree;     //EnterDegree
+        std::map<std::string, double> bb_to_entryDegree;  //EnterDegree
+        std::map<std::string, double> bb_to_allFour;      //AllFour
 
         std::vector <std::string> basic_blocks;
 
@@ -137,6 +146,8 @@ namespace {
         double getEntryDegree(std::string bb_name);
 
         double getMemDensity(std::string bb_name);
+
+        double getAllFour(std::string bb_name);
 
         bool runOnModule(Module &M) override;
 
@@ -280,6 +291,28 @@ double AFLCoverage::getEntryDegree(std::string bb_name) {
     return EntryDegree;
 }
 
+double AFLCoverage::getAllFour(std::string bb_name) {
+
+    double allFour = 0;
+    if (!bb_name.empty()) {
+
+        /* Find distance for bb_name BB */
+        std::map<std::string, double>::iterator it;
+        for (it = bb_to_allFour.begin(); it != bb_to_allFour.end(); ++it) {
+            if (it->first.compare(bb_name) == 0) {
+                allFour = it->second;
+                break;
+            }
+        }
+
+    } else {
+
+        FATAL("bb_name is empty !\n");
+    }
+
+    return allFour;
+}
+
 
 bool AFLCoverage::runOnModule(Module &M) {
 
@@ -287,6 +320,7 @@ bool AFLCoverage::runOnModule(Module &M) {
     bool is_InstNumber  = false;         //InstNum
     bool is_EntryDegree = false;         //EnterDegree
     bool is_Depth       = false;         //Depth
+    bool is_AllFour     = false;         //AllFour
    //TODO: is_Distance and is_MemDensity can not be true at same time
 
     if (!DepthFile.empty()) {
@@ -405,6 +439,36 @@ bool AFLCoverage::runOnModule(Module &M) {
             FATAL("Unable to find %s.", EntryDegreeFile.c_str());
             return false;
         }
+
+    }
+
+    else if (!AllFourFile.empty()) {
+
+        /* put DistanceFile into bb_to_dis map */
+
+        std::ifstream cf(AllFourFile.c_str());
+        if (cf.is_open()) {
+
+            std::string line;
+            while (getline(cf, line)) {
+
+                std::size_t pos = line.find(",");
+                std::string bb_name = line.substr(0, pos);
+                double bb_to_all_four = (double) (std::stod(line.substr(pos + 1, line.length()).c_str()));
+
+                bb_to_allFour.insert(std::pair<std::string, double>(bb_name, bb_to_all_four));
+                basic_blocks.push_back(bb_name);
+
+            }
+            cf.close();
+
+            is_AllFour = true;
+
+        } else {
+            FATAL("Unable to find %s.", AllFourFile.c_str());
+            return false;
+        }
+
     }
 
 
@@ -447,6 +511,13 @@ bool AFLCoverage::runOnModule(Module &M) {
         else if (is_EntryDegree)
             SAYF(cCYA
                          "afl-llvm-pass (BBEntryDegree) "
+                         cBRI
+                                 VERSION
+                         cRST
+                         " by <situlingyun@gmail.com>\n");
+        else if (is_AllFour)
+            SAYF(cCYA
+                         "afl-llvm-pass (AllFour) "
                          cBRI
                                  VERSION
                          cRST
@@ -618,7 +689,7 @@ bool AFLCoverage::runOnModule(Module &M) {
 
 
             /************************Begin Instrumentation of additional Double value *****************/
-            if (is_MemDensity  || is_Depth  || is_EntryDegree) {
+            if (is_MemDensity  || is_Depth  || is_EntryDegree || is_AllFour) {
 
                 std::string bb_name = getBBName(BB);
 
@@ -637,6 +708,8 @@ bool AFLCoverage::runOnModule(Module &M) {
                     memDensity = getDepth(bb_name);
                 }else if(is_MemDensity) {
                     memDensity = getMemDensity(bb_name);
+                }else if(is_AllFour) {
+                    memDensity = getAllFour(bb_name);
                 }
 
                 if (memDensity >= 0) {

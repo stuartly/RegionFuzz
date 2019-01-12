@@ -22,7 +22,6 @@
 
  */
 
-
 #define AFL_LLVM_PASS
 
 #include "../config.h"
@@ -89,8 +88,6 @@
 using namespace llvm;
 using namespace std;
 
-
-
 static cl::opt <std::string> outDir(
         "outDir",
         cl::desc("The name of File to store results"),
@@ -101,13 +98,13 @@ static cl::opt <std::string> outDir(
 
 namespace {
 
-    class BlockDepth : public ModulePass {
+    class BlockAllFour : public ModulePass {
 
     public:
 
         static char ID;
 
-        BlockDepth() : ModulePass(ID) {}
+        BlockAllFour() : ModulePass(ID) {}
 
         bool runOnModule(Module &M) override;
 
@@ -115,10 +112,10 @@ namespace {
     };
 }
 
-char BlockDepth::ID = 0;
+char BlockAllFour::ID = 0;
 
 
-std::string BlockDepth::getBBName(BasicBlock &BB) {
+std::string BlockAllFour::getBBName(BasicBlock &BB) {
 
     /* get the namae of the basic block */
     std::string bb_name("");
@@ -289,11 +286,137 @@ double calcuateDepth(std::set <vector<BasicBlock *>> PathList) {
     return depth;
 }
 
+double calcuateFairReachDegree(std::set<vector<BasicBlock *>> PathList) {
 
-bool BlockDepth::runOnModule(Module &M) {
+    double degree = 1.0, prob = 0;
+
+    for (auto &ele: PathList) {
+        double path_prob = 1.0;
+
+        for (auto &BB: ele) {
+
+            const TerminatorInst *TInst = BB->getTerminator();
+            double SuccNum = TInst->getNumSuccessors();
+
+            if(SuccNum == 0){
+
+                SuccNum = 1.0;
+            }
+
+            double BBPro = (double)(1.0 / SuccNum);
+
+            path_prob *= BBPro;
+
+        }
+
+        prob += path_prob;
+    }
+
+    if (prob > 0) {
+        degree = double (1.0 / prob);
+    }
+
+    return degree;
+}
+
+int calcuteInstNum(BasicBlock &BB) {
+  int TotalInstNum = 0;
+
+  for (auto &II: BB) {
+
+          TotalInstNum++;
+  }
+  return TotalInstNum;
+}
+
+double calcuteMemDensity(BasicBlock &BB) {
+  std::vector <std::string> blacklist = {
+            "asan.",
+            "llvm.",
+            "sancov."
+  };
+
+  int SensitiveInstNum    = 0;
+  int TotalInstNum  = 0;
+  double MemDensity = 0;
+
+  for (auto &Inst:BB) {
+
+      TotalInstNum++;
+
+      if (LoadInst * load = dyn_cast<LoadInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (AllocaInst * alloc = dyn_cast<AllocaInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (StoreInst * store = dyn_cast<StoreInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (FenceInst * fence = dyn_cast<FenceInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (MemCpyInst * memcpy = dyn_cast<MemCpyInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (MemMoveInst * memmov = dyn_cast<MemMoveInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (MemSetInst * memset = dyn_cast<MemSetInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (MemTransferInst * memtrans = dyn_cast<MemTransferInst>(&Inst)) {
+          SensitiveInstNum++;
+      } else if (MemIntrinsic * memIntr = dyn_cast<MemIntrinsic>(&Inst)) {
+          SensitiveInstNum++;
+      }else if (CallInst * call = dyn_cast<CallInst>(&Inst)) {
+          if (call->getCalledFunction()) {
+
+              std::string called = call->getCalledFunction()->getName().str();
+
+              for (std::vector<std::string>::size_type i = 0; i < blacklist.size(); i++) {
+                  if (called.compare(0, blacklist[i].size(), blacklist[i]) == 0)
+                      continue;
+              }
+
+              /*collect sensitive call*/
+              if (called == "strcpy" ||
+                  called == "strncpy" ||
+                  called == "memcpy" ||
+                  called == "memset" ||
+                  called == "strcat" ||
+                  called == "vsnprintf" ||
+                  called == "realpath" ||
+                  called == "sprintf" ||
+                  called == "strcmp" ||
+                  called == "compare" ||
+                  called == "strcmpi" ||
+                  called == "strncat" ||
+                  called == "strchr" ||
+                  called == "snprintf" ||
+                  called == "vfprintf" ||
+                  called == "vsprintf" ||
+                  called == "vsnprintf") {
+                  SensitiveInstNum++;
+              }
+          }
+      }
+  }
+
+
+  if (TotalInstNum != 0) {
+      MemDensity = (double) SensitiveInstNum;
+  }
+
+  return MemDensity;
+}
+
+double calcuateAllFour(std::set <vector<BasicBlock *>> PathList, BasicBlock &BB) {
+  double BBDepth = calcuateDepth(PathList);
+  double FairReachDegree = calcuateFairReachDegree(PathList);
+  int InstNum=calcuteInstNum(BB);
+  double MemDensity=calcuteMemDensity(BB);
+  double AllFour = (BBDepth+FairReachDegree+InstNum+MemDensity)/4;
+  return AllFour;
+}
+
+bool BlockAllFour::runOnModule(Module &M) {
 
     std::string outFile = "";
-    std::map<std::string, double> BB_TO_Depth;
+    std::map<std::string, double> BB_TO_AllFour;
 
     for (auto &F: M) {
 
@@ -307,9 +430,9 @@ bool BlockDepth::runOnModule(Module &M) {
 
             set <vector<BasicBlock *>> PathList = getAllPath(EntryBlock, BB);
 
-            double BBDepth = calcuateDepth(PathList);
+            double BBAllFour = calcuateAllFour(PathList, B);
 
-            BB_TO_Depth.insert(pair<std::string, double>(bb_name, BBDepth));
+            BB_TO_AllFour.insert(pair<std::string, double>(bb_name, BBAllFour));
         }
     }
 
@@ -322,17 +445,17 @@ bool BlockDepth::runOnModule(Module &M) {
     if (outDir.empty()) {
         FATAL("setting -outDir\n");
     } else {
-        outFile = outDir + "/BBDepth.txt";
+        outFile = outDir + "/BBAllFour.txt";
     }
 
-    std::ofstream bb_to_depth;
-    bb_to_depth.open(outFile, std::ofstream::out | std::ofstream::app);
+    std::ofstream bb_to_allFour;
+    bb_to_allFour.open(outFile, std::ofstream::out | std::ofstream::app);
 
-    for (auto &ele: BB_TO_Depth) {
-        bb_to_depth << ele.first << "," << ele.second << "\n";
+    for (auto &ele: BB_TO_AllFour) {
+        bb_to_allFour << ele.first << "," << ele.second << "\n";
     }
 
-    bb_to_depth.close();
+    bb_to_allFour.close();
 
     return false;
 
@@ -341,7 +464,7 @@ bool BlockDepth::runOnModule(Module &M) {
 
 static void registerAFLPass(const PassManagerBuilder &,
                             legacy::PassManagerBase &PM) {
-    PM.add(new BlockDepth());
+    PM.add(new BlockAllFour());
 }
 
 

@@ -120,7 +120,7 @@ static u8 using_memDensity = 0;         /* indicate using memDensity       */
 static u8 using_instNumber = 0;         /* indicate using inst number      */
 static u8 using_entryDegree = 0;        /* indicate using entryDegree      */
 static u8 using_pathDepth   = 0;        /* indicate using pathDepth        */
-
+static u8 using_allFour   = 0;          /* indicate using allFour        */
 
 EXP_ST u8 skip_deterministic,      /* Skip deterministic stages?       */
         force_deterministic,       /* Force deterministic stages?      */
@@ -279,6 +279,7 @@ struct queue_entry {
     int bbCount;                   /* bb number of path                */
     double entryDegree;            /* entry degree of path             */
     double pathDepth;              /* path depth of the path           */
+    double allFour;                /* all four                         */
 
     double weight;                 /* genral weight infor (maybe above)*/
 
@@ -337,6 +338,12 @@ static double cur_pathDepth = 0;        /* pathDepth for input */
 static double max_pathDepth = 0;        /* Maximal pathDepth for any input  */
 static double min_pathDepth = 0;        /* Minimal pathDepth for any input  */
 /**************************End pathDepth***********************************/
+
+/**************************Begin allFour***********************************/
+static double cur_allFour = 0;        /* pathDepth for input */
+static double max_allFour = 0;        /* Maximal pathDepth for any input  */
+static double min_allFour = 0;        /* Minimal pathDepth for any input  */
+/**************************End allFour***********************************/
 
 double IncreaseFactor = 1;
 double ReduceFactor = 1;
@@ -925,6 +932,21 @@ static void update_entryDegree(){
 
 }
 
+static void update_allFour() {
+
+    if (cur_allFour >= 0) {
+
+        if (max_allFour <= 0) {
+            max_allFour = cur_allFour;
+            min_allFour = cur_allFour;
+        }
+        if (cur_allFour > max_allFour) max_allFour = cur_allFour;
+        if (cur_allFour < min_allFour) min_allFour = cur_allFour;
+
+    }
+
+}
+
 
 
 /*** end update metric infor ***/
@@ -978,6 +1000,16 @@ static void add_to_queue(u8 *fname, u32 len, u8 passed_det) {
         q->pathDepth = cur_pathDepth;
         q->weight = cur_pathDepth;
         update_pathDepth();
+        update_bbCount();
+    }
+
+    if (using_allFour) {
+
+        q->allFour = cur_allFour;  //allFour
+        q->weight = cur_allFour;
+
+        /* update max_distance and min_distance */
+        update_allFour();
         update_bbCount();
     }
 
@@ -1157,6 +1189,20 @@ static inline u8 has_new_bits(u8 *virgin_map) {
 
     }
 
+    if(using_allFour){
+        /* Calculate allFour of path the current input executed */
+        double* total_allFour = (double*) (trace_bits + MAP_SIZE);   // how to count the total_distance ?
+        u64* total_count = (u64*) (trace_bits + MAP_SIZE + 8);
+
+        if (*total_count > 0){
+           cur_bbCount = (int)(*total_count);
+           cur_allFour = (double) (*total_allFour) / (double) (cur_bbCount);
+        }else{
+           cur_allFour = 0;
+        }
+
+    }
+
 #else
 
     u32 *current = (u32 *) trace_bits;
@@ -1233,6 +1279,20 @@ static inline u8 has_new_bits(u8 *virgin_map) {
 
         }
 
+    }
+
+    if (using_allFour) {
+
+        /* Calculate allFour of path the current input executed */
+        double *total_allFour = (double *) (trace_bits + MAP_SIZE);   // count the total_allFour ?
+        u32 *total_count = (u32 *) (trace_bits + MAP_SIZE + 4);
+
+        if (*total_count > 0) {
+            cur_bbCount = (int) (*total_count);
+            cur_allFour = (double) (*total_allFour)/ (double)(cur_bbCount);
+        } else {
+            cur_allFour = 0;
+        }
     }
 
 #endif /* ^__x86_64__ */
@@ -3063,7 +3123,15 @@ static u8 calibrate_case(char **argv, struct queue_entry *q, u8 *use_mem,
                 update_bbCount();
             }
 
+            if (using_allFour) {
 
+                q->allFour = cur_allFour;  //allFour
+                q->weight = cur_allFour;
+
+                /* update max_distance and min_distance */
+                update_allFour();
+                update_bbCount();
+            }
 
         }
 
@@ -4746,6 +4814,20 @@ static void show_stats(void) {
                          bV
                  "\n", (double)(cur_entryDegree), (double)(max_entryDegree));
 
+    SAYF(bV
+                 bSTOP
+                 " path AllFour : "
+                 cRST
+                 " %-34.02f"
+                 bSTG
+                 bV bSTOP
+                 " MaxAllFour : "
+                 cRST
+                 "%-8.02f "
+                 bSTG
+                         bV
+                 "\n", (double)cur_allFour, (double)max_allFour);
+
 
 
 
@@ -5788,6 +5870,24 @@ static u32 calculate_score(struct queue_entry *q) {
             }
         }
 
+    }
+
+    if (using_allFour) {
+
+        if (q->allFour > 0) {
+
+            double normalized_allFour = q->allFour;
+
+            if(max_allFour != min_allFour){
+                normalized_allFour = (double)(q->allFour -min_allFour) / (double)((max_allFour + min_allFour)/2.0);
+            }
+
+            if(normalized_allFour > 0){
+
+                Factor = normalized_allFour;
+                Factor = pow(2.0, 2.0 * (double) log2(MAX_FACTOR) * (Factor));
+            }
+        }
     }
 
 
@@ -8160,7 +8260,7 @@ static void usage(u8 *argv0) {
                  "  -c min        - time from start when SA enters exploitation\n"
                  "                  in secs (s), mins (m), hrs (h), or days (d)\n\n"
                  "  -G            - using guided fuzzing strategy \n"
-                 "                  (BBMemDensity, BBInstNum, BBEntryDegree, BBDepth)\n"
+                 "                  (BBMemDensity, BBInstNum, BBEntryDegree, BBDepth, BBAllFour)\n"
 
 
                  "Execution control settings:\n\n"
@@ -9043,7 +9143,7 @@ int main(int argc, char **argv) {
                 break;
 
 
-            case 'G':  /* guided fuzzing by (BBMemDensity,BBDepth, BBDistance )*/
+            case 'G':  /* guided fuzzing by (BBMemDensity,BBDepth, BBDistance ,BBAllFour)*/
                 if (guided_fuzzing) FATAL("Multiple -G options not supported");
 
                 guided_fuzzing = 1;
@@ -9063,10 +9163,13 @@ int main(int argc, char **argv) {
                 } else if (!stricmp(optarg, "BBEntryDegree")) {
 
                     using_entryDegree = 1;
+                } else if (!stricmp(optarg, "BBAllFour")) {
+
+                    using_allFour = 1;
 
                 } else {
 
-                    PFATAL("set guided fuzzing (-G), followed by BBMemDensity, BBInstNum, BBEntryDegree, BBDepth \n ");
+                    PFATAL("set guided fuzzing (-G), followed by BBMemDensity, BBInstNum, BBEntryDegree, BBDepth, BBAllFour \n ");
                 }
 
                 break;
