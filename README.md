@@ -99,7 +99,7 @@ CC="Abosute/Path/To/afl-clang-fast -DepthFile=Abosute/Path/To/BBAllFour.txt" ./c
 make && make install
 
 /*Guided fuzzing*/
-./TAFL/afl-fuzz -i in -o out -G BBDepth -d ./bin
+./TAFL/afl-fuzz -i in -o out -G BBAllFour -d ./bin
 
 ```
 
