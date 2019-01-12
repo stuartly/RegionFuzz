@@ -4816,7 +4816,7 @@ static void show_stats(void) {
 
     SAYF(bV
                  bSTOP
-                 " path AllFour : "
+                 "    path AllFour : "
                  cRST
                  " %-34.02f"
                  bSTG
