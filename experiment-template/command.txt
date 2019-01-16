@@ -1,0 +1,8 @@
+../../NjorthFuzz/afl-fuzz -i test -o out-AFL-org ./installed-Org/bin/xmllint --vaild @@
+../../NjorthFuzz/afl-fuzz -i test -o out-AFL-Depth -G BBDepth ./installed-Depth/bin/xmllint --vaild @@
+../../NjorthFuzz/afl-fuzz -i test -o out-AFL-EntryDegree -G BBEntryDegree ./installed-EntryDegree/bin/xmllint --vaild @@
+../../NjorthFuzz/afl-fuzz -i test -o out-AFL-InstNum -G BBInstNum ./installed-InstNum/bin/xmllint --vaild @@
+../../NjorthFuzz/afl-fuzz -i test -o out-AFL-MemDensity -G BBMemDensity ./installed-MemDensity/bin/xmllint --vaild @@
+../../NjorthFuzz/afl-fuzz -i test -o out-AFL-AllFour -G BBAllFour ./installed-AllFour/bin/xmllint --vaild @@
+
+nohup  >/dev/null 2>&1 &
