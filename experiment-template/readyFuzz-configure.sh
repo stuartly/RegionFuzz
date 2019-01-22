@@ -1,6 +1,7 @@
 # autogen.sh # not run in *.sh script, please run in terminal firstly.
 
 rm -rf BB*.txt
+rm -rf installed-*/
 export NjorthFuzzPath="$PWD/../../NjorthFuzz"
 
 
@@ -21,7 +22,7 @@ export GET_MEM_DENSITY=1
 export CC=${NjorthFuzzPath}/afl-clang-preprocess
 export CXX=${NjorthFuzzPath}/afl-clang-preprocess++
 export CFLAGS="${OrgCFLAGS} -outDir=$PWD"
-export CXXFLAGS="${OrgCFLAGS} -outDir=$PWD"
+export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 
 ./configure --prefix=$PWD/installed-MemDensity
 make -j6
@@ -31,7 +32,7 @@ make clean
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
 export CFLAGS="${OrgCFLAGS} -MemDensityFile=$PWD/BBMemDensity.txt"
-export CXXFLAGS="${OrgCFLAGS} -MemDensityFile=$PWD/BBMemDensity.txt"
+export CXXFLAGS="${OrgCXXFLAGS} -MemDensityFile=$PWD/BBMemDensity.txt"
 
 ./configure --prefix=$PWD/installed-MemDensity
 make -j6
@@ -47,7 +48,7 @@ export GET_INST_NUM=1
 export CC=${NjorthFuzzPath}/afl-clang-preprocess
 export CXX=${NjorthFuzzPath}/afl-clang-preprocess++
 export CFLAGS="${OrgCFLAGS} -outDir=$PWD"
-export CXXFLAGS="${OrgCFLAGS} -outDir=$PWD"
+export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 
 ./configure --prefix=$PWD/installed-InstNum
 make -j6
@@ -57,7 +58,7 @@ make clean
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
 export CFLAGS="${OrgCFLAGS} -InstNumFile=$PWD/BBInstNum.txt"
-export CXXFLAGS="${OrgCFLAGS} -InstNumFile=$PWD/BBInstNum.txt"
+export CXXFLAGS="${OrgCXXFLAGS} -InstNumFile=$PWD/BBInstNum.txt"
 
 ./configure --prefix=$PWD/installed-InstNum
 make -j6
@@ -73,7 +74,7 @@ export GET_ENTRY_DEGREE=1
 export CC=${NjorthFuzzPath}/afl-clang-preprocess
 export CXX=${NjorthFuzzPath}/afl-clang-preprocess++
 export CFLAGS="${OrgCFLAGS} -outDir=$PWD"
-export CXXFLAGS="${OrgCFLAGS} -outDir=$PWD"
+export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 
 ./configure --prefix=$PWD/installed-EntryDegree
 make -j6
@@ -83,7 +84,7 @@ make clean
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
 export CFLAGS="${OrgCFLAGS} -EntryDegreeFile=$PWD/BBEntryDegree.txt"
-export CXXFLAGS="${OrgCFLAGS} -EntryDegreeFile=$PWD/BBEntryDegree.txt"
+export CXXFLAGS="${OrgCXXFLAGS} -EntryDegreeFile=$PWD/BBEntryDegree.txt"
 
 ./configure --prefix=$PWD/installed-EntryDegree
 make -j6
@@ -110,7 +111,7 @@ make clean
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
 export CFLAGS="${OrgCFLAGS} -DepthFile=$PWD/BBDepth.txt"
-export CXXFLAGS="${OrgCFLAGS} -DepthFile=$PWD/BBDepth.txt"
+export CXXFLAGS="${OrgCXXFLAGS} -DepthFile=$PWD/BBDepth.txt"
 
 ./configure --prefix=$PWD/installed-Depth
 make -j6
@@ -137,7 +138,7 @@ make clean
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
 export CFLAGS="${OrgCFLAGS} -AllFourFile=$PWD/BBAllFour.txt"
-export CXXFLAGS="${OrgCFLAGS} -AllFourFile=$PWD/BBAllFour.txt"
+export CXXFLAGS="${OrgCXXFLAGS} -AllFourFile=$PWD/BBAllFour.txt"
 
 ./configure --prefix=$PWD/installed-AllFour
 make -j6
