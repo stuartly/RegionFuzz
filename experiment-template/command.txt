@@ -1,8 +1,49 @@
-../../NjorthFuzz/afl-fuzz -i test -o out-AFL-org ./installed-Org/bin/xmllint --vaild @@
-../../NjorthFuzz/afl-fuzz -i test -o out-AFL-Depth -G BBDepth ./installed-Depth/bin/xmllint --vaild @@
-../../NjorthFuzz/afl-fuzz -i test -o out-AFL-EntryDegree -G BBEntryDegree ./installed-EntryDegree/bin/xmllint --vaild @@
-../../NjorthFuzz/afl-fuzz -i test -o out-AFL-InstNum -G BBInstNum ./installed-InstNum/bin/xmllint --vaild @@
-../../NjorthFuzz/afl-fuzz -i test -o out-AFL-MemDensity -G BBMemDensity ./installed-MemDensity/bin/xmllint --vaild @@
-../../NjorthFuzz/afl-fuzz -i test -o out-AFL-AllFour -G BBAllFour ./installed-AllFour/bin/xmllint --vaild @@
+nohup [command] >/dev/null 2>&1 &
 
-nohup  >/dev/null 2>&1 &
+# libxml2-2.9.9
+nohup ../../NjorthFuzz/afl-fuzz -i test -o out-AFL-org ./installed-Org/bin/xmllint --vaild @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test -o out-AFL-Depth -G BBDepth ./installed-Depth/bin/xmllint --vaild @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test -o out-AFL-EntryDegree -G BBEntryDegree ./installed-EntryDegree/bin/xmllint --vaild @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test -o out-AFL-InstNum -G BBInstNum ./installed-InstNum/bin/xmllint --vaild @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test -o out-AFL-MemDensity -G BBMemDensity ./installed-MemDensity/bin/xmllint --vaild @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test -o out-AFL-AllFour -G BBAllFour ./installed-AllFour/bin/xmllint --vaild @@ >/dev/null 2>&1 &
+
+# libtiff-4.0.9
+nohup ../../NjorthFuzz/afl-fuzz -i test/images/ -o out-AFL-org ./installed-Org/bin/tiffdump @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test/images/ -o out-AFL-Depth -G BBDepth ./installed-Depth/bin/tiffdump @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test/images/ -o out-AFL-EntryDegree -G BBEntryDegree ./installed-EntryDegree/bin/tiffdump @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test/images/ -o out-AFL-InstNum -G BBInstNum ./installed-InstNum/bin/tiffdump @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test/images/ -o out-AFL-MemDensity -G BBMemDensity ./installed-MemDensity/bin/tiffdump @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i test/images/ -o out-AFL-AllFour -G BBAllFour ./installed-AllFour/bin/tiffdump @@ >/dev/null 2>&1 &
+
+# libjpeg-turbo-2.0.1
+nohup ../../NjorthFuzz/afl-fuzz -i testimages/ -o out-AFL-org -d ./installed-Org/bin/cjpeg @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i testimages/ -o out-AFL-Depth -d -G BBDepth ./installed-Depth/bin/cjpeg @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i testimages/ -o out-AFL-EntryDegree -d -G BBEntryDegree ./installed-EntryDegree/bin/cjpeg @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i testimages/ -o out-AFL-InstNum -d -G BBInstNum ./installed-InstNum/bin/cjpeg @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i testimages/ -o out-AFL-MemDensity -d -G BBMemDensity ./installed-MemDensity/bin/cjpeg @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i testimages/ -o out-AFL-AllFour -d -G BBAllFour ./installed-AllFour/bin/cjpeg @@ >/dev/null 2>&1 &
+
+# libav-12.3
+nohup ../../NjorthFuzz/afl-fuzz -i fuzz_seed/ -o out-AFL-org -d ./installed-Org/bin/avprobe @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i fuzz_seed/ -o out-AFL-Depth -d -G BBDepth ./installed-Depth/bin/avprobe @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i fuzz_seed/ -o out-AFL-EntryDegree -d -G BBEntryDegree ./installed-EntryDegree/bin/avprobe @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i fuzz_seed/ -o out-AFL-InstNum -d -G BBInstNum ./installed-InstNum/bin/avprobe @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i fuzz_seed/ -o out-AFL-MemDensity -d -G BBMemDensity ./installed-MemDensity/bin/avprobe @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i fuzz_seed/ -o out-AFL-AllFour -d -G BBAllFour ./installed-AllFour/bin/avprobe @@ >/dev/null 2>&1 &
+
+# libpng-1.6.35
+nohup ../../NjorthFuzz/afl-fuzz -i ./contrib/testpngs/ -o out-AFL-org -d ./installed-Org/bin/pngfix @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./contrib/testpngs/ -o out-AFL-Depth -d -G BBDepth ./installed-Depth/bin/pngfix @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./contrib/testpngs/ -o out-AFL-EntryDegree -d -G BBEntryDegree ./installed-EntryDegree/bin/pngfix @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./contrib/testpngs/ -o out-AFL-InstNum -d -G BBInstNum ./installed-InstNum/bin/pngfix @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./contrib/testpngs/ -o out-AFL-MemDensity -d -G BBMemDensity ./installed-MemDensity/bin/pngfix @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./contrib/testpngs/ -o out-AFL-AllFour -d -G BBAllFour ./installed-AllFour/bin/pngfix @@ >/dev/null 2>&1 &
+
+# ImageMagick-7.0.8-24
+nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-org -d ./installed-Org/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-Depth -d -G BBDepth ./installed-Depth/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-EntryDegree -d -G BBEntryDegree ./installed-EntryDegree/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-InstNum -d -G BBInstNum ./installed-InstNum/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-MemDensity -d -G BBMemDensity ./installed-MemDensity/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-AllFour -d -G BBAllFour ./installed-AllFour/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
