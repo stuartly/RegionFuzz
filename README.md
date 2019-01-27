@@ -1,4 +1,4 @@
-# Install TAFL
+# Install
 ```
 1. sudo apt-get install bison flex libboost-dev
 2. sudo apt-get intall clang llvm 
