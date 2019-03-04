@@ -95,7 +95,7 @@ make -j4 && make install
 
 
 /*Instrumentation */
-CC="Abosute/Path/To/afl-clang-fast -DepthFile=Abosute/Path/To/BBAllFour.txt" ./configure --prefix=$PWD/installed --disable-shared
+CC="Abosute/Path/To/afl-clang-fast -AllFourFile=Abosute/Path/To/BBAllFour.txt" ./configure --prefix=$PWD/installed --disable-shared
 make && make install
 
 /*Guided fuzzing*/
