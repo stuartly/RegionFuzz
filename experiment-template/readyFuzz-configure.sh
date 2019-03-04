@@ -13,7 +13,7 @@ export OrgCXXFLAGS=${CXXFLAGS}
 ./configure --prefix=$PWD/installed-Org
 make -j6 
 make install
-make clean
+make distclean
 
 
 # GET_MEM_DENSITY
@@ -27,7 +27,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 ./configure --prefix=$PWD/installed-MemDensity
 make -j6
 make install
-make clean
+make distclean
 
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
@@ -37,7 +37,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -MemDensityFile=$PWD/BBMemDensity.txt"
 ./configure --prefix=$PWD/installed-MemDensity
 make -j6
 make install
-make clean
+make distclean
 
 unset GET_MEM_DENSITY
 
@@ -53,7 +53,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 ./configure --prefix=$PWD/installed-InstNum
 make -j6
 make install
-make clean
+make distclean
 
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
@@ -63,7 +63,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -InstNumFile=$PWD/BBInstNum.txt"
 ./configure --prefix=$PWD/installed-InstNum
 make -j6
 make install
-make clean
+make distclean
 
 unset GET_INST_NUM
 
@@ -79,7 +79,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 ./configure --prefix=$PWD/installed-EntryDegree
 make -j6
 make install
-make clean
+make distclean
 
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
@@ -89,7 +89,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -EntryDegreeFile=$PWD/BBEntryDegree.txt"
 ./configure --prefix=$PWD/installed-EntryDegree
 make -j6
 make install
-make clean
+make distclean
 
 unset GET_ENTRY_DEGREE
 
@@ -106,7 +106,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 ./configure --prefix=$PWD/installed-Depth
 make -j6
 make install
-make clean
+make distclean
 
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
@@ -116,7 +116,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -DepthFile=$PWD/BBDepth.txt"
 ./configure --prefix=$PWD/installed-Depth
 make -j6
 make install
-make clean
+make distclean
 
 unset GET_DEPTH
 
@@ -133,7 +133,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -outDir=$PWD"
 ./configure --prefix=$PWD/installed-AllFour
 make -j6
 make install
-make clean
+make distclean
 
 export CC=${NjorthFuzzPath}/afl-clang-fast
 export CXX=${NjorthFuzzPath}/afl-clang-fast++
@@ -143,7 +143,7 @@ export CXXFLAGS="${OrgCXXFLAGS} -AllFourFile=$PWD/BBAllFour.txt"
 ./configure --prefix=$PWD/installed-AllFour
 make -j6
 make install
-make clean
+make distclean
 
 unset GET_ALLFOUR
 

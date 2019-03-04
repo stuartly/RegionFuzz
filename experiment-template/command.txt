@@ -47,3 +47,27 @@ nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-EntryDegree -d -G BBEntryD
 nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-InstNum -d -G BBInstNum ./installed-InstNum/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
 nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-MemDensity -d -G BBMemDensity ./installed-MemDensity/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
 nohup ../../NjorthFuzz/afl-fuzz -i images/ -o out-AFL-AllFour -d -G BBAllFour ./installed-AllFour/bin/magick convert @@ /dev/null >/dev/null 2>&1 &
+
+# catdoc-0.95
+nohup ../../NjorthFuzz/afl-fuzz -i ./charsets/ -o out-AFL-org -d ./installed-Org/bin/catdoc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./charsets/ -o out-AFL-Depth -d -G BBDepth ./installed-Depth/bin/catdoc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./charsets/ -o out-AFL-EntryDegree -d -G BBEntryDegree ./installed-EntryDegree/bin/catdoc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./charsets/ -o out-AFL-InstNum -d -G BBInstNum ./installed-InstNum/bin/catdoc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./charsets/ -o out-AFL-MemDensity -d -G BBMemDensity ./installed-MemDensity/bin/catdoc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./charsets/ -o out-AFL-AllFour -d -G BBAllFour ./installed-AllFour/bin/catdoc @@ >/dev/null 2>&1 &
+
+# libxslt-1.1.33
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/REC/ -o out-AFL-org -m 100 -d ./installed-Org/bin/xsltproc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/REC/ -o out-AFL-Depth -m 100 -d -G BBDepth ./installed-Depth/bin/xsltproc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/REC/ -o out-AFL-EntryDegree -m 100 -d -G BBEntryDegree ./installed-EntryDegree/bin/xsltproc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/REC/ -o out-AFL-InstNum -m 100 -d -G BBInstNum ./installed-InstNum/bin/xsltproc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/REC/ -o out-AFL-MemDensity -m 100 -d -G BBMemDensity ./installed-MemDensity/bin/xsltproc @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/REC/ -o out-AFL-AllFour -m 100 -d -G BBAllFour ./installed-AllFour/bin/xsltproc @@ >/dev/null 2>&1 &
+
+# liblnk-20181227
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/input/public/ -o out-AFL-org -d ./installed-Org/bin/lnkinfo @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/input/public/ -o out-AFL-Depth -d -G BBDepth ./installed-Depth/bin/lnkinfo @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/input/public/ -o out-AFL-EntryDegree -d -G BBEntryDegree ./installed-EntryDegree/bin/lnkinfo @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/input/public/ -o out-AFL-InstNum -d -G BBInstNum ./installed-InstNum/bin/lnkinfo @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/input/public/ -o out-AFL-MemDensity -d -G BBMemDensity ./installed-MemDensity/bin/lnkinfo @@ >/dev/null 2>&1 &
+nohup ../../NjorthFuzz/afl-fuzz -i ./tests/input/public/ -o out-AFL-AllFour -d -G BBAllFour ./installed-AllFour/bin/lnkinfo @@ >/dev/null 2>&1 &
