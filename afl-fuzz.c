@@ -1667,9 +1667,9 @@ static void update_bitmap_score(struct queue_entry *q) {
             if (top_rated[i]) {
 
                 /* Faster-executing or smaller test cases are favored. */
-//                if (q->exec_us * q->len > top_rated[i]->exec_us * top_rated[i]->len) {
-//                    continue;
-//                }
+               if (q->exec_us * q->len > top_rated[i]->exec_us * top_rated[i]->len) {
+                   continue;
+               }
 
                   /* low frequence test case are favored */
 //                if (next_p2(q->n_fuzz) > next_p2(top_rated[i]->n_fuzz)) {
@@ -1684,13 +1684,13 @@ static void update_bitmap_score(struct queue_entry *q) {
 //                        }
 //                }
 
-//
-                double q_value = (double) (next_p2(q->n_fuzz) * q->exec_us * q->len / (q->weight + 0.1));
-                double top_i_value = (double) (next_p2(top_rated[i]->n_fuzz) * top_rated[i]->exec_us *
-                                               top_rated[i]->len / (top_rated[i]->weight + 0.1));
-                if (q_value > top_i_value) {
-                    continue;
-                }
+
+                // double q_value = (double) (next_p2(q->n_fuzz) * q->exec_us * q->len / (q->weight + 0.1));
+                // double top_i_value = (double) (next_p2(top_rated[i]->n_fuzz) * top_rated[i]->exec_us *
+                //                                top_rated[i]->len / (top_rated[i]->weight + 0.1));
+                // if (q_value > top_i_value) {
+                //     continue;
+                // }
 
 
                 /* Looks like we're going to win. Decrease ref count for the
@@ -4743,14 +4743,14 @@ static void show_stats(void) {
 
     SAYF(bV
                  bSTOP
-                 "   path blockNum : "
+                 "  path block num : "
                  cRST
                  " %-34s"
                  bSTG
                  bV bSTOP
-                 "MaxBlockNum : "
+                 "    Max : "
                  cRST
-                 "%-8s "
+                 "%-8s     "
                  bSTG
                          bV
                  "\n", DI(cur_bbCount), DI(max_bbCount));
@@ -4758,28 +4758,28 @@ static void show_stats(void) {
 
     SAYF(bV
                  bSTOP
-                 " path instNumber : "
+                 "    path complex : "
                  cRST
                  " %-34.02f"
                  bSTG
                  bV bSTOP
-                 " MaxInstNum : "
+                 "    Max : "
                  cRST
-                 "%-8.02f "
+                 "%-8.02f     "
                  bSTG
                          bV
                  "\n", (double)cur_instNum, (double)max_instNum);
 
     SAYF(bV
                  bSTOP
-                 " path SenDensity : "
+                 "  path sensitive : "
                  cRST
                  " %-34.02f"
                  bSTG
                  bV bSTOP
-                 " MaxDensity : "
+                 "    Max : "
                  cRST
-                 "%-8.02f "
+                 "%-8.02f     "
                  bSTG
                          bV
                  "\n", (double)cur_memDensity, (double)max_memDensity);
@@ -4787,14 +4787,14 @@ static void show_stats(void) {
 
     SAYF(bV
                  bSTOP
-                 "      path depth : "
+                 "path deep degree : "
                  cRST
                  " %-34.02f"
                  bSTG
                  bV bSTOP
-                 "   MaxDepth : "
+                 "    Max : "
                  cRST
-                 "%-8.02f "
+                 "%-8.02f     "
                  bSTG
                          bV
                  "\n", (double)cur_pathDepth, (double)(max_pathDepth));
@@ -4802,14 +4802,14 @@ static void show_stats(void) {
 
     SAYF(bV
                  bSTOP
-                 " path rareDegree : "
+                 " path rare-reach : "
                  cRST
                  " %-34.02f"
                  bSTG
                  bV bSTOP
-                 "  MaxDegree : "
+                 "    Max : "
                  cRST
-                 "%-8.02f "
+                 "%-8.02f     "
                  bSTG
                          bV
                  "\n", (double)(cur_entryDegree), (double)(max_entryDegree));
@@ -4818,12 +4818,12 @@ static void show_stats(void) {
                  bSTOP
                  "    path AllFour : "
                  cRST
-                 " %e                      "
+                 " %-34.02f" 
                  bSTG
                  bV bSTOP
-                 " MaxAllFour : "
+                 "    Max : "
                  cRST
-                 "%e "
+                 "%-8.02f     "
                  bSTG
                          bV
                  "\n", (double)cur_allFour, (double)max_allFour);
