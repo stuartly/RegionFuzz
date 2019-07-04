@@ -298,7 +298,7 @@ double calcuateFairReachDegree(std::set<vector<BasicBlock *>> PathList) {
     }
 
     if (prob > 0) {
-        degree = double (1.0 / prob);
+        degree = double (1.0 / prob / 10000);
     }
 
     return degree;

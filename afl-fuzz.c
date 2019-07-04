@@ -1667,9 +1667,9 @@ static void update_bitmap_score(struct queue_entry *q) {
             if (top_rated[i]) {
 
                 /* Faster-executing or smaller test cases are favored. */
-               if (q->exec_us * q->len > top_rated[i]->exec_us * top_rated[i]->len) {
-                   continue;
-               }
+               // if (q->exec_us * q->len > top_rated[i]->exec_us * top_rated[i]->len) {
+               //     continue;
+               // }
 
                   /* low frequence test case are favored */
 //                if (next_p2(q->n_fuzz) > next_p2(top_rated[i]->n_fuzz)) {
@@ -1685,12 +1685,13 @@ static void update_bitmap_score(struct queue_entry *q) {
 //                }
 
 
-                // double q_value = (double) (next_p2(q->n_fuzz) * q->exec_us * q->len / (q->weight + 0.1));
-                // double top_i_value = (double) (next_p2(top_rated[i]->n_fuzz) * top_rated[i]->exec_us *
-                //                                top_rated[i]->len / (top_rated[i]->weight + 0.1));
-                // if (q_value > top_i_value) {
-                //     continue;
-                // }
+                double q_value = (double) (next_p2(q->n_fuzz) * q->len / (q->weight + 1));
+                double top_i_value = (double) (next_p2(top_rated[i]->n_fuzz) * top_rated[i]->len / (top_rated[i]->weight + 1));
+                if (q_value > top_i_value) {
+                    continue;
+                } else if (q->exec_us * q->len > top_rated[i]->exec_us * top_rated[i]->len) {
+                    continue;
+                }
 
 
                 /* Looks like we're going to win. Decrease ref count for the
