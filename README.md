@@ -10,7 +10,7 @@
 ```
  
 
-# Using TAFL-MemDensity
+# Using TAFL-SensitiveDegree
 ```
 /*extract weight value*/
 export GET_MEM_DENSITY=1
@@ -26,7 +26,7 @@ make && make install
 
 ```
 
-# using TAFL-InstNum
+# using TAFL-ComplexDegree
 ```
 /*extract weight value*/
 export GET_INST_NUM=1
@@ -43,7 +43,7 @@ make && make install
 ```
 
 
-# using TAFL-EntryDegree
+# using TAFL-RareReachDegree
 ```
 /*extract weight value*/
 export GET_ENTRY_DEGREE=1
@@ -60,7 +60,7 @@ make && make install
 ```
 
 
-# using TAFL-Depth
+# using TAFL-DeepDegree
 ```
 /*extract weight value*/
 export GET_Depth=1
