@@ -8,7 +8,7 @@
 ```
  
 
-# Example (RegionFuzz-DeepDegree)
+# Example
 ```
 /*extract weight value*/
 export GET_Depth=1
@@ -25,7 +25,7 @@ make && make install
 ```
 
 
-# Demo on LAVA-M Benchmark
+# Demo
 
 ```
 cd Benchmark/LAVA-M/base64
@@ -33,3 +33,8 @@ bash Run.sh
 
 ```
 
+# Reference
+```
+Lingyun Situ, Zhiqiang Zuo, Le Guan, Linzhang Wang, Xuandong Li, Jin Shi, Peng Liu. Vulnerable Region-Aware Greybox Fuzzing [J]. Journal of Computer Science and Technology. 2021
+
+```
