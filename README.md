@@ -35,6 +35,7 @@ bash Run.sh
 
 # Reference
 ```
-Lingyun Situ, Zhiqiang Zuo, Le Guan, Linzhang Wang, Xuandong Li, Jin Shi, Peng Liu. Vulnerable Region-Aware Greybox Fuzzing [J]. Journal of Computer Science and Technology. 2021
+Situ L, Zuo Z, Guan L, et al. Vulnerable Region-Aware Greybox Fuzzing[J]. Journal of Computer Science and Technology, 2021, 36(5): 1212-1228. ![image](https://user-images.githubusercontent.com/13762161/153739016-6e048300-73e6-4d33-b51f-3ba490de8749.png)
+
 
 ```
