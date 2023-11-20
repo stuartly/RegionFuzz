@@ -1,0 +1,5 @@
+digraph "CFG for 'gl_linked_size' function" {
+	label="CFG for 'gl_linked_size' function";
+
+	Node0xc7170f0 [shape=record,label="{gl_anylinked_list2.h:167:}"];
+}

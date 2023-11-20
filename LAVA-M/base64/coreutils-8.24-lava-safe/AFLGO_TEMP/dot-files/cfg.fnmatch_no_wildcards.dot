@@ -1,0 +1,38 @@
+digraph "CFG for 'fnmatch_no_wildcards' function" {
+	label="CFG for 'fnmatch_no_wildcards' function";
+
+	Node0xde09160 [shape=record,label="{exclude.c:333:|{<s0>T|<s1>F}}"];
+	Node0xde09160:s0 -> Node0xde0d370;
+	Node0xde09160:s1 -> Node0xde09db0;
+	Node0xde0d370 [shape=record,label="{exclude.c:336:|{<s0>T|<s1>F}}"];
+	Node0xde0d370:s0 -> Node0xde0de10;
+	Node0xde0d370:s1 -> Node0xde0de90;
+	Node0xde0de10 [shape=record,label="{exclude.c:337:}"];
+	Node0xde0de10 -> Node0xde09f20;
+	Node0xde0de90 [shape=record,label="{exclude.c:338:}"];
+	Node0xde0de90 -> Node0xde09f20;
+	Node0xde09db0 [shape=record,label="{exclude.c:339:|{<s0>T|<s1>F}}"];
+	Node0xde09db0:s0 -> Node0xde10270;
+	Node0xde09db0:s1 -> Node0xde101d0;
+	Node0xde101d0 [shape=record,label="{exclude.c:341:|{<s0>T|<s1>F}}"];
+	Node0xde101d0:s0 -> Node0xde11640;
+	Node0xde101d0:s1 -> Node0xde09f20;
+	Node0xde11640 [shape=record,label="{exclude.c:345:}"];
+	Node0xde11640 -> Node0xde09f20;
+	Node0xde10270 [shape=record,label="{exclude.c:360:|{<s0>T|<s1>F}}"];
+	Node0xde10270:s0 -> Node0xde54310;
+	Node0xde10270:s1 -> Node0xde13100;
+	Node0xde13100 [shape=record,label="{exclude.c:367:}"];
+	Node0xde13100 -> Node0xde13870;
+	Node0xde54310 [shape=record,label="{exclude.c:368:}"];
+	Node0xde54310 -> Node0xde12f60;
+	Node0xde13870 [shape=record,label="{exclude.c:367:66|{<s0>T|<s1>F}}"];
+	Node0xde13870:s0 -> Node0xde12f60;
+	Node0xde13870:s1 -> Node0xde13320;
+	Node0xde13320 [shape=record,label="{exclude.c:363:|{<s0>T|<s1>F}}"];
+	Node0xde13320:s0 -> Node0xde54310;
+	Node0xde13320:s1 -> Node0xde13870;
+	Node0xde12f60 [shape=record,label="{exclude.c:372:}"];
+	Node0xde12f60 -> Node0xde09f20;
+	Node0xde09f20 [shape=record,label="{exclude.c:375:}"];
+}

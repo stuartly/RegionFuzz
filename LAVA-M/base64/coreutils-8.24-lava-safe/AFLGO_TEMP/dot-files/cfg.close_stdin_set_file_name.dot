@@ -1,0 +1,5 @@
+digraph "CFG for 'close_stdin_set_file_name' function" {
+	label="CFG for 'close_stdin_set_file_name' function";
+
+	Node0xdae8d70 [shape=record,label="{closein.c:43:}"];
+}

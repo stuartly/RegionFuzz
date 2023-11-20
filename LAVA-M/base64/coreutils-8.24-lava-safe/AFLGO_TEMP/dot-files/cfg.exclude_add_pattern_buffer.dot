@@ -1,0 +1,5 @@
+digraph "CFG for 'exclude_add_pattern_buffer' function" {
+	label="CFG for 'exclude_add_pattern_buffer' function";
+
+	Node0xdc98720 [shape=record,label="{exclude.c:132:}"];
+}

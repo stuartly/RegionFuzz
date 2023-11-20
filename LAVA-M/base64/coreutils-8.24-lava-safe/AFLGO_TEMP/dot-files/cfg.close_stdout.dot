@@ -1,0 +1,26 @@
+digraph "CFG for 'close_stdout' function" {
+	label="CFG for 'close_stdout' function";
+
+	Node0xcbbbb00 [shape=record,label="{closeout.c:109:|{<s0>T|<s1>F}}"];
+	Node0xcbbbb00:s0 -> Node0xcde3a70;
+	Node0xcbbbb00:s1 -> Node0xcde3ac0;
+	Node0xcde3ac0 [shape=record,label="{closeout.c:110:|{<s0>T|<s1>F}}"];
+	Node0xcde3ac0:s0 -> Node0xcde3a20;
+	Node0xcde3ac0:s1 -> Node0xcde5dc0;
+	Node0xcde5dc0 [shape=record,label="{closeout.c:110:16|{<s0>T|<s1>F}}"];
+	Node0xcde5dc0:s0 -> Node0xcde3a70;
+	Node0xcde5dc0:s1 -> Node0xcde3a20;
+	Node0xcde3a20 [shape=record,label="{closeout.c:112:|{<s0>T|<s1>F}}"];
+	Node0xcde3a20:s0 -> Node0xcde4e60;
+	Node0xcde3a20:s1 -> Node0xcde0f40;
+	Node0xcde0f40 [shape=record,label="{closeout.c:114:}"];
+	Node0xcde0f40 -> Node0xcde4ef0;
+	Node0xcde4e60 [shape=record,label="{closeout.c:117:}"];
+	Node0xcde4e60 -> Node0xcde4ef0;
+	Node0xcde4ef0 [shape=record,label="{closeout.c:119:}"];
+	Node0xcde3a70 [shape=record,label="{closeout.c:122:|{<s0>T|<s1>F}}"];
+	Node0xcde3a70:s0 -> Node0xcdea120;
+	Node0xcde3a70:s1 -> Node0xcde8db0;
+	Node0xcde8db0 [shape=record,label="{closeout.c:123:}"];
+	Node0xcdea120 [shape=record,label="{closeout.c:124:}"];
+}

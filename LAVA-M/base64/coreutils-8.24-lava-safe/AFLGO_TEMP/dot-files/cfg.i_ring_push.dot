@@ -1,0 +1,10 @@
+digraph "CFG for 'i_ring_push' function" {
+	label="CFG for 'i_ring_push' function";
+
+	Node0xc792300 [shape=record,label="{i-ring.c:43:|{<s0>T|<s1>F}}"];
+	Node0xc792300:s0 -> Node0xc902a70;
+	Node0xc792300:s1 -> Node0xc9091f0;
+	Node0xc902a70 [shape=record,label="{i-ring.c:50:}"];
+	Node0xc902a70 -> Node0xc9091f0;
+	Node0xc9091f0 [shape=record,label="{i-ring.c:51:}"];
+}

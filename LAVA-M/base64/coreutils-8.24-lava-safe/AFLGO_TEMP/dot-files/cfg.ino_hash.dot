@@ -1,0 +1,5 @@
+digraph "CFG for 'ino_hash' function" {
+	label="CFG for 'ino_hash' function";
+
+	Node0xd850d10 [shape=record,label="{ino-map.c:54:}"];
+}

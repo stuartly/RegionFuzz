@@ -1,0 +1,48 @@
+lib/printf-args.o: lib/printf-args.c lib/config.h lib/printf-args.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h \
+  lib/wchar.h /usr/include/features.h /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/include/wchar.h \
+  lib/stdio.h /usr/include/stdio.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/xlocale.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h
+
+lib/config.h:
+
+lib/printf-args.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h:
+
+lib/wchar.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/wchar.h:
+
+lib/stdio.h:
+
+/usr/include/stdio.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:

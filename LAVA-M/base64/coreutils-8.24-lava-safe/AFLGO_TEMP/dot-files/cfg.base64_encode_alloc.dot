@@ -1,0 +1,15 @@
+digraph "CFG for 'base64_encode_alloc' function" {
+	label="CFG for 'base64_encode_alloc' function";
+
+	Node0xce5b9d0 [shape=record,label="{base64.c:147:|{<s0>T|<s1>F}}"];
+	Node0xce5b9d0:s0 -> Node0xcef9930;
+	Node0xce5b9d0:s1 -> Node0xcef9980;
+	Node0xcef9930 [shape=record,label="{base64.c:165:}"];
+	Node0xcef9930 -> Node0xcefa4f0;
+	Node0xcef9980 [shape=record,label="{base64.c:169:|{<s0>T|<s1>F}}"];
+	Node0xcef9980:s0 -> Node0xcefa4f0;
+	Node0xcef9980:s1 -> Node0xcefb3a0;
+	Node0xcefb3a0 [shape=record,label="{base64.c:173:}"];
+	Node0xcefb3a0 -> Node0xcefa4f0;
+	Node0xcefa4f0 [shape=record,label="{base64.c:176:}"];
+}

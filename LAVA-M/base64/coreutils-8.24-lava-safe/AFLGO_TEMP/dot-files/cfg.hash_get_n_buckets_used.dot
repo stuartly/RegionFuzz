@@ -1,0 +1,5 @@
+digraph "CFG for 'hash_get_n_buckets_used' function" {
+	label="CFG for 'hash_get_n_buckets_used' function";
+
+	Node0xdd58ee0 [shape=record,label="{hash.c:158:}"];
+}

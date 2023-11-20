@@ -1,0 +1,5 @@
+digraph "CFG for 'stdbuf_init' function" {
+	label="CFG for 'stdbuf_init' function";
+
+	Node0xd26d020 [shape=record,label="{conftest.c:694:}"];
+}

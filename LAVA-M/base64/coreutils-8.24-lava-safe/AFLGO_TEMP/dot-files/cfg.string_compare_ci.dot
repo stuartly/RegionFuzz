@@ -1,0 +1,5 @@
+digraph "CFG for 'string_compare_ci' function" {
+	label="CFG for 'string_compare_ci' function";
+
+	Node0xddf18f0 [shape=record,label="{exclude.c:239:}"];
+}

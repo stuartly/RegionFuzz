@@ -1,0 +1,24 @@
+digraph "CFG for 'mbiter_multi_copy' function" {
+	label="CFG for 'mbiter_multi_copy' function";
+
+	Node0xe0e5600 [shape=record,label="{mbiter.h:191:|{<s0>T|<s1>F}}"];
+	Node0xe0e5600:s0 -> Node0xe0f7330;
+	Node0xe0e5600:s1 -> Node0xe0f7250;
+	Node0xe0f7250 [shape=record,label="{mbiter.h:195:}"];
+	Node0xe0f7250 -> Node0xe0f72c0;
+	Node0xe0f7330 [shape=record,label="{mbiter.h:197:}"];
+	Node0xe0f7330 -> Node0xe0f72c0;
+	Node0xe0f72c0 [shape=record,label="{mbiter.h:198:|{<s0>T|<s1>F}}"];
+	Node0xe0f72c0:s0 -> Node0xe136ed0;
+	Node0xe0f72c0:s1 -> Node0xe0fcdb0;
+	Node0xe0fcdb0 [shape=record,label="{mbchar.h:277:}"];
+	Node0xe0fcdb0 -> Node0xe16e610;
+	Node0xe136ed0 [shape=record,label="{mbchar.h:272:}"];
+	Node0xe136ed0 -> Node0xe16e610;
+	Node0xe16e610 [shape=record,label="{mbchar.h:277:17|{<s0>T|<s1>F}}"];
+	Node0xe16e610:s0 -> Node0xe191910;
+	Node0xe16e610:s1 -> Node0xe0e58e0;
+	Node0xe0e58e0 [shape=record,label="{mbchar.h:279:}"];
+	Node0xe0e58e0 -> Node0xe191910;
+	Node0xe191910 [shape=record,label="{mbiter.h:200:}"];
+}

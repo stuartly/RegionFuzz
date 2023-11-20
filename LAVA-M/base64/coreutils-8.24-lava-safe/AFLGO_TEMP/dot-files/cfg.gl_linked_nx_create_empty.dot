@@ -1,0 +1,10 @@
+digraph "CFG for 'gl_linked_nx_create_empty' function" {
+	label="CFG for 'gl_linked_nx_create_empty' function";
+
+	Node0xc7106c0 [shape=record,label="{gl_anylinked_list2.h:40:|{<s0>T|<s1>F}}"];
+	Node0xc7106c0:s0 -> Node0xc71e3e0;
+	Node0xc7106c0:s1 -> Node0xc71ec80;
+	Node0xc71ec80 [shape=record,label="{gl_anylinked_list2.h:47:}"];
+	Node0xc71ec80 -> Node0xc71e3e0;
+	Node0xc71e3e0 [shape=record,label="{gl_anylinked_list2.h:75:}"];
+}

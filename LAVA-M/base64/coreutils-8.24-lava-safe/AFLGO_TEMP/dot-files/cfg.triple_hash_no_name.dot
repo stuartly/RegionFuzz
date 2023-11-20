@@ -1,0 +1,5 @@
+digraph "CFG for 'triple_hash_no_name' function" {
+	label="CFG for 'triple_hash_no_name' function";
+
+	Node0xd28b000 [shape=record,label="{hash-triple.c:45:}"];
+}

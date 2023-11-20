@@ -1,0 +1,24 @@
+digraph "CFG for 'freea' function" {
+	label="CFG for 'freea' function";
+
+	Node0xc44bf20 [shape=record,label="{malloca.c:116:|{<s0>T|<s1>F}}"];
+	Node0xc44bf20:s0 -> Node0xc4632d0;
+	Node0xc44bf20:s1 -> Node0xc45d800;
+	Node0xc45d800 [shape=record,label="{malloca.c:125:|{<s0>T|<s1>F}}"];
+	Node0xc45d800:s0 -> Node0xc39b040;
+	Node0xc45d800:s1 -> Node0xc4632d0;
+	Node0xc39b040 [shape=record,label="{malloca.c:129:|{<s0>T|<s1>F}}"];
+	Node0xc39b040:s0 -> Node0xc4632d0;
+	Node0xc39b040:s1 -> Node0xc4d0b60;
+	Node0xc4d0b60 [shape=record,label="{malloca.c:134:}"];
+	Node0xc4d0b60 -> Node0xc45bd80;
+	Node0xc45bd80 [shape=record,label="{malloca.c:133:|{<s0>T|<s1>F}}"];
+	Node0xc45bd80:s0 -> Node0xc463e60;
+	Node0xc45bd80:s1 -> Node0xc4525f0;
+	Node0xc463e60 [shape=record,label="{malloca.c:137:}"];
+	Node0xc463e60 -> Node0xc4632d0;
+	Node0xc4525f0 [shape=record,label="{malloca.c:133:37|{<s0>T|<s1>F}}"];
+	Node0xc4525f0:s0 -> Node0xc4632d0;
+	Node0xc4525f0:s1 -> Node0xc45bd80;
+	Node0xc4632d0 [shape=record,label="{cleanup9}"];
+}

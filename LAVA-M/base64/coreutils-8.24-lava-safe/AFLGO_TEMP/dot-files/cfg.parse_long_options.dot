@@ -1,0 +1,15 @@
+digraph "CFG for 'parse_long_options' function" {
+	label="CFG for 'parse_long_options' function";
+
+	Node0xdb916e0 [shape=record,label="{long-options.c:44:|{<s0>T|<s1>F}}"];
+	Node0xdb916e0:s0 -> Node0xdd4bc10;
+	Node0xdb916e0:s1 -> Node0xdd4bba0;
+	Node0xdd4bc10 [shape=record,label="{long-options.c:61:|{<s0>def|<s1>118|<s2>104}}"];
+	Node0xdd4bc10:s0 -> Node0xdd4bba0;
+	Node0xdd4bc10:s1 -> Node0xdd4f570;
+	Node0xdd4bc10:s2 -> Node0xdd4f350;
+	Node0xdd4f350 [shape=record,label="{long-options.c:66:}"];
+	Node0xdd4f350 -> Node0xdd4f570;
+	Node0xdd4f570 [shape=record,label="{long-options.c:70:}"];
+	Node0xdd4bba0 [shape=record,label="{long-options.c:83:}"];
+}

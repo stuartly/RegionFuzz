@@ -1,0 +1,5 @@
+digraph "CFG for 'gnu_mbswidth' function" {
+	label="CFG for 'gnu_mbswidth' function";
+
+	Node0xc874130 [shape=record,label="{mbswidth.c:47:}"];
+}

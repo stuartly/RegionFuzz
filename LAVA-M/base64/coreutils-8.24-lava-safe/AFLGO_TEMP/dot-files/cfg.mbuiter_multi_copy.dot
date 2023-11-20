@@ -1,0 +1,24 @@
+digraph "CFG for 'mbuiter_multi_copy' function" {
+	label="CFG for 'mbuiter_multi_copy' function";
+
+	Node0xcd397d0 [shape=record,label="{mbuiter.h:199:|{<s0>T|<s1>F}}"];
+	Node0xcd397d0:s0 -> Node0xcd4c260;
+	Node0xcd397d0:s1 -> Node0xcd4c1c0;
+	Node0xcd4c1c0 [shape=record,label="{mbuiter.h:202:}"];
+	Node0xcd4c1c0 -> Node0xcd4c210;
+	Node0xcd4c260 [shape=record,label="{mbuiter.h:204:}"];
+	Node0xcd4c260 -> Node0xcd4c210;
+	Node0xcd4c210 [shape=record,label="{mbuiter.h:205:|{<s0>T|<s1>F}}"];
+	Node0xcd4c210:s0 -> Node0xcdc3360;
+	Node0xcd4c210:s1 -> Node0xcd42930;
+	Node0xcd42930 [shape=record,label="{mbchar.h:277:}"];
+	Node0xcd42930 -> Node0xcd42a80;
+	Node0xcdc3360 [shape=record,label="{mbchar.h:272:}"];
+	Node0xcdc3360 -> Node0xcd42a80;
+	Node0xcd42a80 [shape=record,label="{mbchar.h:277:14|{<s0>T|<s1>F}}"];
+	Node0xcd42a80:s0 -> Node0xcde5af0;
+	Node0xcd42a80:s1 -> Node0xcde62e0;
+	Node0xcde62e0 [shape=record,label="{mbchar.h:279:}"];
+	Node0xcde62e0 -> Node0xcde5af0;
+	Node0xcde5af0 [shape=record,label="{mbuiter.h:207:}"];
+}

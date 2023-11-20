@@ -1,0 +1,9 @@
+digraph "CFG for 'heap_alloc' function" {
+	label="CFG for 'heap_alloc' function";
+
+	Node0xd7d7f40 [shape=record,label="{heap.c:44:|{<s0>T|<s1>F}}"];
+	Node0xd7d7f40:s0 -> Node0xd7e14d0;
+	Node0xd7d7f40:s1 -> Node0xd7ef720;
+	Node0xd7e14d0 [shape=record,label="{xalloc.h:107:}"];
+	Node0xd7ef720 [shape=record,label="{heap.c:46:}"];
+}

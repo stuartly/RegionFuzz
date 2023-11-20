@@ -1,0 +1,24 @@
+digraph "CFG for 'exclude_fnmatch' function" {
+	label="CFG for 'exclude_fnmatch' function";
+
+	Node0xdd9c1b0 [shape=record,label="{exclude.c:378:|{<s0>T|<s1>F}}"];
+	Node0xdd9c1b0:s0 -> Node0xddb2370;
+	Node0xdd9c1b0:s1 -> Node0xddb23e0;
+	Node0xddb2370 [shape=record,label="{exclude.c:385:|{<s0>T|<s1>F}}"];
+	Node0xddb2370:s0 -> Node0xddff1c0;
+	Node0xddb2370:s1 -> Node0xddb23e0;
+	Node0xddff1c0 [shape=record,label="{exclude.c:389:}"];
+	Node0xddff1c0 -> Node0xddb10b0;
+	Node0xddb10b0 [shape=record,label="{exclude.c:384:|{<s0>T|<s1>F}}"];
+	Node0xddb10b0:s0 -> Node0xddb34e0;
+	Node0xddb10b0:s1 -> Node0xddb11e0;
+	Node0xddb34e0 [shape=record,label="{exclude.c:389:36|{<s0>T|<s1>F}}"];
+	Node0xddb34e0:s0 -> Node0xddb11e0;
+	Node0xddb34e0:s1 -> Node0xdd8ce90;
+	Node0xdd8ce90 [shape=record,label="{exclude.c:390:}"];
+	Node0xdd8ce90 -> Node0xddb11e0;
+	Node0xddb11e0 [shape=record,label="{exclude.c:384:37|{<s0>T|<s1>F}}"];
+	Node0xddb11e0:s0 -> Node0xddb10b0;
+	Node0xddb11e0:s1 -> Node0xddb23e0;
+	Node0xddb23e0 [shape=record,label="{exclude.c:384:38}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for 'uinttostr' function" {
+	label="CFG for 'uinttostr' function";
+
+	Node0xdc5b830 [shape=record,label="{anytostr.copy4.c:36:}"];
+	Node0xdc5b830 -> Node0xdcba7d0;
+	Node0xdcba7d0 [shape=record,label="{anytostr.copy4.c:38:|{<s0>T|<s1>F}}"];
+	Node0xdcba7d0:s0 -> Node0xdcba7d0;
+	Node0xdcba7d0:s1 -> Node0xdcb9160;
+	Node0xdcb9160 [shape=record,label="{anytostr.copy4.c:38:22}"];
+}

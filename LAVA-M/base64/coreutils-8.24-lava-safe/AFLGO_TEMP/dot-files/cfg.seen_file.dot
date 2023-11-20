@@ -1,0 +1,10 @@
+digraph "CFG for 'seen_file' function" {
+	label="CFG for 'seen_file' function";
+
+	Node0xdce3a60 [shape=record,label="{file-set.c:61:|{<s0>T|<s1>F}}"];
+	Node0xdce3a60:s0 -> Node0xdce7b50;
+	Node0xdce3a60:s1 -> Node0xdcec980;
+	Node0xdcec980 [shape=record,label="{file-set.c:69:}"];
+	Node0xdcec980 -> Node0xdce7b50;
+	Node0xdce7b50 [shape=record,label="{file-set.c:74:}"];
+}

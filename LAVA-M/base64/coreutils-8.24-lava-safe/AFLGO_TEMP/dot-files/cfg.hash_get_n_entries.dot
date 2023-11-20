@@ -1,0 +1,5 @@
+digraph "CFG for 'hash_get_n_entries' function" {
+	label="CFG for 'hash_get_n_entries' function";
+
+	Node0xdd58e20 [shape=record,label="{hash.c:166:}"];
+}

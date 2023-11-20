@@ -1,0 +1,5 @@
+digraph "CFG for 'ino_map_free' function" {
+	label="CFG for 'ino_map_free' function";
+
+	Node0xd849940 [shape=record,label="{ino-map.c:106:}"];
+}

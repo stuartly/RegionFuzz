@@ -1,0 +1,5 @@
+digraph "CFG for 'sha256_init_ctx' function" {
+	label="CFG for 'sha256_init_ctx' function";
+
+	Node0xcf658a0 [shape=record,label="{sha256.c:63:}"];
+}

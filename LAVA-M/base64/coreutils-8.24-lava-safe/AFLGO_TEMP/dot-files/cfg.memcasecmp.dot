@@ -1,0 +1,16 @@
+digraph "CFG for 'memcasecmp' function" {
+	label="CFG for 'memcasecmp' function";
+
+	Node0xc510950 [shape=record,label="{memcasecmp.c:32:|{<s0>T|<s1>F}}"];
+	Node0xc510950:s0 -> Node0xc520d20;
+	Node0xc510950:s1 -> Node0xc51ecb0;
+	Node0xc51ecb0 [shape=record,label="{memcasecmp.c:41:}"];
+	Node0xc51ecb0 -> Node0xc51bc50;
+	Node0xc51b930 [shape=record,label="{memcasecmp.c:34:|{<s0>T|<s1>F}}"];
+	Node0xc51b930:s0 -> Node0xc51bc50;
+	Node0xc51b930:s1 -> Node0xc520d20;
+	Node0xc51bc50 [shape=record,label="{memcasecmp.c:34:32|{<s0>T|<s1>F}}"];
+	Node0xc51bc50:s0 -> Node0xc51b930;
+	Node0xc51bc50:s1 -> Node0xc520d20;
+	Node0xc520d20 [shape=record,label="{memcasecmp.c:49:}"];
+}

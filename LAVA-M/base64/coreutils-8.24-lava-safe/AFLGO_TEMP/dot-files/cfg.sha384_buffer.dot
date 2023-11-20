@@ -1,0 +1,5 @@
+digraph "CFG for 'sha384_buffer' function" {
+	label="CFG for 'sha384_buffer' function";
+
+	Node0xcd75eb0 [shape=record,label="{sha512.c:345:}"];
+}

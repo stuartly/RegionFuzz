@@ -1,0 +1,20 @@
+digraph "CFG for 'last_component' function" {
+	label="CFG for 'last_component' function";
+
+	Node0xc672770 [shape=record,label="{basename-lgpl.c:30:}"];
+	Node0xc672770 -> Node0xc67bde0;
+	Node0xc67bde0 [shape=record,label="{basename-lgpl.c:32:|{<s0>T|<s1>F}}"];
+	Node0xc67bde0:s0 -> Node0xc67bde0;
+	Node0xc67bde0:s1 -> Node0xc715c20;
+	Node0xc715c20 [shape=record,label="{basename-lgpl.c:39:}"];
+	Node0xc715c20 -> Node0xc67c8a0;
+	Node0xc67c8a0 [shape=record,label="{basename-lgpl.c:39:16|{<s0>def|<s1>0|<s2>47}}"];
+	Node0xc67c8a0:s0 -> Node0xc67cfe0;
+	Node0xc67c8a0:s1 -> Node0xc67c680;
+	Node0xc67c8a0:s2 -> Node0xc67ca20;
+	Node0xc67cfe0 [shape=record,label="{basename-lgpl.c:43:}"];
+	Node0xc67cfe0 -> Node0xc67ca20;
+	Node0xc67ca20 [shape=record,label="{basename-lgpl.c:34:}"];
+	Node0xc67ca20 -> Node0xc67c8a0;
+	Node0xc67c680 [shape=record,label="{basename-lgpl.c:50:}"];
+}

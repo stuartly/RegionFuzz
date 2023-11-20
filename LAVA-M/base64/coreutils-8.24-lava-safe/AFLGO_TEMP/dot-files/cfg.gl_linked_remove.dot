@@ -1,0 +1,40 @@
+digraph "CFG for 'gl_linked_remove' function" {
+	label="CFG for 'gl_linked_remove' function";
+
+	Node0xc775930 [shape=record,label="{gl_anylinked_list2.h:885:|{<s0>T|<s1>F}}"];
+	Node0xc775930:s0 -> Node0xc7bb000;
+	Node0xc775930:s1 -> Node0xc736a50;
+	Node0xc736a50 [shape=record,label="{gl_anylinked_list2.h:453:|{<s0>T|<s1>F}}"];
+	Node0xc736a50:s0 -> Node0xc788080;
+	Node0xc736a50:s1 -> Node0xc87db70;
+	Node0xc87db70 [shape=record,label="{gl_anylinked_list2.h:454:}"];
+	Node0xc87db70 -> Node0xc783650;
+	Node0xc783650 [shape=record,label="{gl_anylinked_list2.h:316:|{<s0>T|<s1>F}}"];
+	Node0xc783650:s0 -> Node0xc74bfc0;
+	Node0xc783650:s1 -> Node0xc75c8f0;
+	Node0xc75c8f0 [shape=record,label="{gl_anylinked_list2.h:453:32|{<s0>T|<s1>F}}"];
+	Node0xc75c8f0:s0 -> Node0xc788080;
+	Node0xc75c8f0:s1 -> Node0xc783650;
+	Node0xc7bb000 [shape=record,label="{gl_anylinked_list2.h:459:|{<s0>T|<s1>F}}"];
+	Node0xc7bb000:s0 -> Node0xc788080;
+	Node0xc7bb000:s1 -> Node0xc891420;
+	Node0xc891420 [shape=record,label="{gl_anylinked_list2.h:460:}"];
+	Node0xc891420 -> Node0xc737df0;
+	Node0xc737df0 [shape=record,label="{gl_anylinked_list2.h:316:33|{<s0>T|<s1>F}}"];
+	Node0xc737df0:s0 -> Node0xc74bfc0;
+	Node0xc737df0:s1 -> Node0xc7b97c0;
+	Node0xc7b97c0 [shape=record,label="{gl_anylinked_list2.h:459:34|{<s0>T|<s1>F}}"];
+	Node0xc7b97c0:s0 -> Node0xc788080;
+	Node0xc7b97c0:s1 -> Node0xc737df0;
+	Node0xc74bfc0 [shape=record,label="{gl_anylinked_list2.h:887:|{<s0>T|<s1>F}}"];
+	Node0xc74bfc0:s0 -> Node0xc788080;
+	Node0xc74bfc0:s1 -> Node0xc787830;
+	Node0xc787830 [shape=record,label="{gl_anylinked_list2.h:812:|{<s0>T|<s1>F}}"];
+	Node0xc787830:s0 -> Node0xc7536d0;
+	Node0xc787830:s1 -> Node0xc72b3f0;
+	Node0xc72b3f0 [shape=record,label="{gl_anylinked_list2.h:831:}"];
+	Node0xc72b3f0 -> Node0xc7536d0;
+	Node0xc7536d0 [shape=record,label="{gl_anylinked_list2.h:832:}"];
+	Node0xc7536d0 -> Node0xc788080;
+	Node0xc788080 [shape=record,label="{gl_anylinked_list2.h:893:}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'di_ent_compare' function" {
+	label="CFG for 'di_ent_compare' function";
+
+	Node0xcc91740 [shape=record,label="{di-set.c:95:}"];
+}

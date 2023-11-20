@@ -1,0 +1,17 @@
+digraph "CFG for 'canon_host' function" {
+	label="CFG for 'canon_host' function";
+
+	Node0xddf1140 [shape=record,label="{canon-host.c:33:|{<s0>T|<s1>F}}"];
+	Node0xddf1140:s0 -> Node0xdea4300;
+	Node0xddf1140:s1 -> Node0xddf19f0;
+	Node0xdea4300 [shape=record,label="{canon-host.c:74:|{<s0>T|<s1>F}}"];
+	Node0xdea4300:s0 -> Node0xdea3f80;
+	Node0xdea4300:s1 -> Node0xdea3d50;
+	Node0xdea3f80 [shape=record,label="{canon-host.c:76:}"];
+	Node0xdea3f80 -> Node0xdea3d50;
+	Node0xdea3d50 [shape=record,label="{canon-host.c:77:}"];
+	Node0xdea3d50 -> Node0xdea0d30;
+	Node0xddf19f0 [shape=record,label="{canon-host.c:80:}"];
+	Node0xddf19f0 -> Node0xdea0d30;
+	Node0xdea0d30 [shape=record,label="{canon-host.c:62:}"];
+}

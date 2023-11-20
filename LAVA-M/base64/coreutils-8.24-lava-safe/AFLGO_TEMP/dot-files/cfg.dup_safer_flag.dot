@@ -1,0 +1,5 @@
+digraph "CFG for 'dup_safer_flag' function" {
+	label="CFG for 'dup_safer_flag' function";
+
+	Node0xd7b1930 [shape=record,label="{dup-safer-flag.c:34:}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for 'gettime' function" {
+	label="CFG for 'gettime' function";
+
+	Node0xd9818c0 [shape=record,label="{gettime.c:29:|{<s0>T|<s1>F}}"];
+	Node0xd9818c0:s0 -> Node0xd9480f0;
+	Node0xd9818c0:s1 -> Node0xd98a980;
+	Node0xd98a980 [shape=record,label="{gettime.c:41:}"];
+	Node0xd98a980 -> Node0xd9480f0;
+	Node0xd9480f0 [shape=record,label="{gettime.c:48:}"];
+}

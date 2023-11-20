@@ -1,0 +1,5 @@
+digraph "CFG for 'creat_safer' function" {
+	label="CFG for 'creat_safer' function";
+
+	Node0xd3d6440 [shape=record,label="{creat-safer.c:28:}"];
+}

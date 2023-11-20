@@ -1,0 +1,5 @@
+digraph "CFG for 'noop' function" {
+	label="CFG for 'noop' function";
+
+	Node0xda41230 [shape=record,label="{conftest.c:502:}"];
+}

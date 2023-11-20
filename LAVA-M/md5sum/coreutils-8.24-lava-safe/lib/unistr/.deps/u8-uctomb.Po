@@ -1,0 +1,44 @@
+lib/unistr/u8-uctomb.o: lib/unistr/u8-uctomb.c lib/config.h lib/unistr.h \
+  lib/unitypes.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdint.h \
+  /usr/include/stdint.h /usr/include/features.h \
+  /usr/include/stdc-predef.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h lib/unused-parameter.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdbool.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h
+
+lib/config.h:
+
+lib/unistr.h:
+
+lib/unitypes.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+lib/unused-parameter.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdbool.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h:

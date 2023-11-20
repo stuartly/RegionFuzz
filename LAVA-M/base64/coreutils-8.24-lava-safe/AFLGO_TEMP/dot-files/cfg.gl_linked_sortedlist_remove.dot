@@ -1,0 +1,26 @@
+digraph "CFG for 'gl_linked_sortedlist_remove' function" {
+	label="CFG for 'gl_linked_sortedlist_remove' function";
+
+	Node0xc7b5e00 [shape=record,label="{gl_anylinked_list2.h:1180:|{<s0>T|<s1>F}}"];
+	Node0xc7b5e00:s0 -> Node0xc7bd1a0;
+	Node0xc7b5e00:s1 -> Node0xc7bd910;
+	Node0xc7bd910 [shape=record,label="{gl_anylinked_list2.h:1187:}"];
+	Node0xc7bd910 -> Node0xc721d10;
+	Node0xc7bb070 [shape=record,label="{gl_anylinked_list2.h:1183:|{<s0>T|<s1>F}}"];
+	Node0xc7bb070:s0 -> Node0xc7bd1a0;
+	Node0xc7bb070:s1 -> Node0xc721d10;
+	Node0xc721d10 [shape=record,label="{gl_anylinked_list2.h:1187:34|{<s0>T|<s1>F}}"];
+	Node0xc721d10:s0 -> Node0xc7bd1a0;
+	Node0xc721d10:s1 -> Node0xc7bc130;
+	Node0xc7bc130 [shape=record,label="{gl_anylinked_list2.h:1191:|{<s0>T|<s1>F}}"];
+	Node0xc7bc130:s0 -> Node0xc7bc730;
+	Node0xc7bc130:s1 -> Node0xc7bb070;
+	Node0xc7bc730 [shape=record,label="{gl_anylinked_list2.h:812:|{<s0>T|<s1>F}}"];
+	Node0xc7bc730:s0 -> Node0xc790230;
+	Node0xc7bc730:s1 -> Node0xc72cec0;
+	Node0xc72cec0 [shape=record,label="{gl_anylinked_list2.h:831:}"];
+	Node0xc72cec0 -> Node0xc790230;
+	Node0xc790230 [shape=record,label="{gl_anylinked_list2.h:832:}"];
+	Node0xc790230 -> Node0xc7bd1a0;
+	Node0xc7bd1a0 [shape=record,label="{gl_anylinked_list2.h:1195:}"];
+}

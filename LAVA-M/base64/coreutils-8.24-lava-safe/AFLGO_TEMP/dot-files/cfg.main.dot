@@ -1,0 +1,5 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0xd347920 [shape=record,label="{conftest.c:17:}"];
+}

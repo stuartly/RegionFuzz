@@ -1,0 +1,17 @@
+digraph "CFG for 'add_exclude_file' function" {
+	label="CFG for 'add_exclude_file' function";
+
+	Node0xddeef60 [shape=record,label="{exclude.c:676:|{<s0>T|<s1>F}}"];
+	Node0xddeef60:s0 -> Node0xde04610;
+	Node0xddeef60:s1 -> Node0xde05ae0;
+	Node0xde04610 [shape=record,label="{exclude.c:680:|{<s0>T|<s1>F}}"];
+	Node0xde04610:s0 -> Node0xddd2fa0;
+	Node0xde04610:s1 -> Node0xde05ae0;
+	Node0xddd2fa0 [shape=record,label="{exclude.c:685:}"];
+	Node0xddd2fa0 -> Node0xde07b90;
+	Node0xde05ae0 [shape=record,label="{exclude.c:686:|{<s0>T|<s1>F}}"];
+	Node0xde05ae0:s0 -> Node0xde07b90;
+	Node0xde05ae0:s1 -> Node0xde08710;
+	Node0xde08710 [shape=record,label="{exclude.c:681:}"];
+	Node0xde07b90 [shape=record,label="{exclude.c:695:}"];
+}

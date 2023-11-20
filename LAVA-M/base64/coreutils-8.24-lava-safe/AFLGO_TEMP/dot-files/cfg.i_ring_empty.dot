@@ -1,0 +1,5 @@
+digraph "CFG for 'i_ring_empty' function" {
+	label="CFG for 'i_ring_empty' function";
+
+	Node0xc903be0 [shape=record,label="{i-ring.c:37:}"];
+}

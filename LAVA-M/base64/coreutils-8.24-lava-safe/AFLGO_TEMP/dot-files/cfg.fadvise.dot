@@ -1,0 +1,10 @@
+digraph "CFG for 'fadvise' function" {
+	label="CFG for 'fadvise' function";
+
+	Node0xcd87270 [shape=record,label="{fadvise.c:39:|{<s0>T|<s1>F}}"];
+	Node0xcd87270:s0 -> Node0xcd8f240;
+	Node0xcd87270:s1 -> Node0xcd8f1d0;
+	Node0xcd8f1d0 [shape=record,label="{fadvise.c:42:}"];
+	Node0xcd8f1d0 -> Node0xcd8f240;
+	Node0xcd8f240 [shape=record,label="{fadvise.c:43:}"];
+}

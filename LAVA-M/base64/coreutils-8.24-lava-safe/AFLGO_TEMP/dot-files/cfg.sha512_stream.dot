@@ -1,0 +1,38 @@
+digraph "CFG for 'sha512_stream' function" {
+	label="CFG for 'sha512_stream' function";
+
+	Node0xcc30f50 [shape=record,label="{sha512.c:184:|{<s0>T|<s1>F}}"];
+	Node0xcc30f50:s0 -> Node0xcd71e70;
+	Node0xcc30f50:s1 -> Node0xcd724f0;
+	Node0xcd724f0 [shape=record,label="{sha512.c:186:}"];
+	Node0xcd724f0 -> Node0xcd72c30;
+	Node0xcd72c30 [shape=record,label="{sha512.c:187:|{<s0>T|<s1>F}}"];
+	Node0xcd72c30:s0 -> Node0xcd774e0;
+	Node0xcd72c30:s1 -> Node0xcd40950;
+	Node0xcd40950 [shape=record,label="{sha512.c:215:}"];
+	Node0xcd40950 -> Node0xcd746f0;
+	Node0xcd734d0 [shape=record,label="{sha512.c:187:77|{<s0>T|<s1>F}}"];
+	Node0xcd734d0:s0 -> Node0xcd774e0;
+	Node0xcd734d0:s1 -> Node0xcd746f0;
+	Node0xcd746f0 [shape=record,label="{sha512.c:215:78|{<s0>T|<s1>F}}"];
+	Node0xcd746f0:s0 -> Node0xcd74c10;
+	Node0xcd746f0:s1 -> Node0xcd74c60;
+	Node0xcd74c10 [shape=record,label="{sha512.c:220:|{<s0>T|<s1>F}}"];
+	Node0xcd74c10:s0 -> Node0xcd74110;
+	Node0xcd74c10:s1 -> Node0xd07a640;
+	Node0xd07a640 [shape=record,label="{sha512.c:222:}"];
+	Node0xd07a640 -> Node0xcd71e70;
+	Node0xcd74c60 [shape=record,label="{sha512.c:231:|{<s0>T|<s1>F}}"];
+	Node0xcd74c60:s0 -> Node0xcd734d0;
+	Node0xcd74c60:s1 -> Node0xcd74110;
+	Node0xcd774e0 [shape=record,label="{sha512.c:186:79}"];
+	Node0xcd774e0 -> Node0xcd72c30;
+	Node0xcd74110 [shape=record,label="{sha512.c:244:|{<s0>T|<s1>F}}"];
+	Node0xcd74110:s0 -> Node0xcd77760;
+	Node0xcd74110:s1 -> Node0xcd72da0;
+	Node0xcd72da0 [shape=record,label="{sha512.c:186:80}"];
+	Node0xcd72da0 -> Node0xcd77760;
+	Node0xcd77760 [shape=record,label="{sha512.c:186:81}"];
+	Node0xcd77760 -> Node0xcd71e70;
+	Node0xcd71e70 [shape=record,label="{sha512.c:251:}"];
+}

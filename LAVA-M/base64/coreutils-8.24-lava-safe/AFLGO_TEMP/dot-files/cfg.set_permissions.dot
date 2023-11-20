@@ -1,0 +1,12 @@
+digraph "CFG for 'set_permissions' function" {
+	label="CFG for 'set_permissions' function";
+
+	Node0xd908a30 [shape=record,label="{set-permissions.c:762:|{<s0>T|<s1>F}}"];
+	Node0xd908a30:s0 -> Node0xd972e40;
+	Node0xd908a30:s1 -> Node0xd90bb40;
+	Node0xd90bb40 [shape=record,label="{set-permissions.c:749:}"];
+	Node0xd90bb40 -> Node0xd911b30;
+	Node0xd972e40 [shape=record,label="{set-permissions.c:751:}"];
+	Node0xd972e40 -> Node0xd911b30;
+	Node0xd911b30 [shape=record,label="{set-permissions.c:767:}"];
+}

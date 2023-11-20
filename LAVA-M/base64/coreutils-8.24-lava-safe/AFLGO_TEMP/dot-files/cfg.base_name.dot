@@ -1,0 +1,12 @@
+digraph "CFG for 'base_name' function" {
+	label="CFG for 'base_name' function";
+
+	Node0xcc29fe0 [shape=record,label="{basename.c:28:|{<s0>T|<s1>F}}"];
+	Node0xcc29fe0:s0 -> Node0xcc33990;
+	Node0xcc29fe0:s1 -> Node0xcc339e0;
+	Node0xcc33990 [shape=record,label="{basename.c:36:}"];
+	Node0xcc33990 -> Node0xcc2a1e0;
+	Node0xcc339e0 [shape=record,label="{basename.c:39:}"];
+	Node0xcc339e0 -> Node0xcc2a1e0;
+	Node0xcc2a1e0 [shape=record,label="{basename.c:58:}"];
+}

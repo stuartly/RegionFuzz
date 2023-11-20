@@ -1,0 +1,10 @@
+digraph "CFG for 'gl_linked_remove_node' function" {
+	label="CFG for 'gl_linked_remove_node' function";
+
+	Node0xc767ad0 [shape=record,label="{gl_anylinked_list2.h:812:|{<s0>T|<s1>F}}"];
+	Node0xc767ad0:s0 -> Node0xc77c490;
+	Node0xc767ad0:s1 -> Node0xc77c420;
+	Node0xc77c420 [shape=record,label="{gl_anylinked_list2.h:831:}"];
+	Node0xc77c420 -> Node0xc77c490;
+	Node0xc77c490 [shape=record,label="{gl_anylinked_list2.h:832:}"];
+}

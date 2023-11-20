@@ -1,0 +1,5 @@
+digraph "CFG for 'initbuffer' function" {
+	label="CFG for 'initbuffer' function";
+
+	Node0xd4d5e80 [shape=record,label="{linebuffer.c:37:}"];
+}

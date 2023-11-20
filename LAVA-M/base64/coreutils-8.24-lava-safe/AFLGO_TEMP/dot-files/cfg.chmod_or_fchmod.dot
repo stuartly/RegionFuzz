@@ -1,0 +1,12 @@
+digraph "CFG for 'chmod_or_fchmod' function" {
+	label="CFG for 'chmod_or_fchmod' function";
+
+	Node0xd8fd1d0 [shape=record,label="{set-permissions.c:746:|{<s0>T|<s1>F}}"];
+	Node0xd8fd1d0:s0 -> Node0xd907ca0;
+	Node0xd8fd1d0:s1 -> Node0xd907be0;
+	Node0xd907be0 [shape=record,label="{set-permissions.c:749:}"];
+	Node0xd907be0 -> Node0xd8fd220;
+	Node0xd907ca0 [shape=record,label="{set-permissions.c:751:}"];
+	Node0xd907ca0 -> Node0xd8fd220;
+	Node0xd8fd220 [shape=record,label="{set-permissions.c:752:}"];
+}

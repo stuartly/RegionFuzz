@@ -1,0 +1,5 @@
+digraph "CFG for '__argmatch_die' function" {
+	label="CFG for '__argmatch_die' function";
+
+	Node0xc5daaf0 [shape=record,label="{argmatch.c:63:}"];
+}

@@ -1,0 +1,9 @@
+digraph "CFG for 'careadlinkatcwd' function" {
+	label="CFG for 'careadlinkatcwd' function";
+
+	Node0xd963900 [shape=record,label="{areadlink.c:36:|{<s0>T|<s1>F}}"];
+	Node0xd963900:s0 -> Node0xd9c0cd0;
+	Node0xd963900:s1 -> Node0xd9c0c80;
+	Node0xd9c0c80 [shape=record,label="{areadlink.c:42:}"];
+	Node0xd9c0cd0 [shape=record,label="{areadlink.c:43:}"];
+}

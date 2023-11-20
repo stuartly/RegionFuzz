@@ -1,0 +1,12 @@
+digraph "CFG for 'gethrxtime' function" {
+	label="CFG for 'gethrxtime' function";
+
+	Node0xd0f41c0 [shape=record,label="{gethrxtime.c:48:|{<s0>T|<s1>F}}"];
+	Node0xd0f41c0:s0 -> Node0xd0fdd40;
+	Node0xd0f41c0:s1 -> Node0xd100990;
+	Node0xd0fdd40 [shape=record,label="{gethrxtime.c:50:}"];
+	Node0xd0fdd40 -> Node0xd030c40;
+	Node0xd100990 [shape=record,label="{gethrxtime.c:51:}"];
+	Node0xd100990 -> Node0xd030c40;
+	Node0xd030c40 [shape=record,label="{gethrxtime.c:71:}"];
+}

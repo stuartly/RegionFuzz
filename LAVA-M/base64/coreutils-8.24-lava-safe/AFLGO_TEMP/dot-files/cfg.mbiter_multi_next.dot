@@ -1,0 +1,48 @@
+digraph "CFG for 'mbiter_multi_next' function" {
+	label="CFG for 'mbiter_multi_next' function";
+
+	Node0xe0d76b0 [shape=record,label="{mbiter.h:124:|{<s0>T|<s1>F}}"];
+	Node0xe0d76b0:s0 -> Node0xe0e31d0;
+	Node0xe0d76b0:s1 -> Node0xe0d6e90;
+	Node0xe0e31d0 [shape=record,label="{mbiter.h:128:|{<s0>T|<s1>F}}"];
+	Node0xe0e31d0:s0 -> Node0xe0e4a90;
+	Node0xe0e31d0:s1 -> Node0xe0eacc0;
+	Node0xe0eacc0 [shape=record,label="{mbiter.h:145:}"];
+	Node0xe0eacc0 -> Node0xe0e5cc0;
+	Node0xe0e4a90 [shape=record,label="{mbiter.h:131:|{<s0>T|<s1>F}}"];
+	Node0xe0e4a90:s0 -> Node0xe0e5f70;
+	Node0xe0e4a90:s1 -> Node0xe0da330;
+	Node0xe0da330 [shape=record,label="{mbiter.h:136:}"];
+	Node0xe0da330 -> Node0xe0e5f00;
+	Node0xe0e5f70 [shape=record,label="{mbiter.h:142:|{<s0>T|<s1>F}}"];
+	Node0xe0e5f70:s0 -> Node0xe0e8450;
+	Node0xe0e5f70:s1 -> Node0xe0e84d0;
+	Node0xe0e8450 [shape=record,label="{mbiter.h:142:113}"];
+	Node0xe0e84d0 [shape=record,label="{mbiter.h:143:}"];
+	Node0xe0e84d0 -> Node0xe0e5cc0;
+	Node0xe0e5cc0 [shape=record,label="{mbiter.h:146:|{<s0>def|<s1>-1|<s2>-2|<s3>0}}"];
+	Node0xe0e5cc0:s0 -> Node0xe0ee810;
+	Node0xe0e5cc0:s1 -> Node0xe0ebab0;
+	Node0xe0e5cc0:s2 -> Node0xe0ecd20;
+	Node0xe0e5cc0:s3 -> Node0xe0e5e70;
+	Node0xe0ebab0 [shape=record,label="{mbiter.h:150:}"];
+	Node0xe0ebab0 -> Node0xe0e5f00;
+	Node0xe0ecd20 [shape=record,label="{mbiter.h:158:}"];
+	Node0xe0ecd20 -> Node0xe0e5f00;
+	Node0xe0e5e70 [shape=record,label="{mbiter.h:168:|{<s0>T|<s1>F}}"];
+	Node0xe0e5e70:s0 -> Node0xe0e0690;
+	Node0xe0e5e70:s1 -> Node0xe0e0610;
+	Node0xe0e0610 [shape=record,label="{mbiter.h:169:}"];
+	Node0xe0e0690 [shape=record,label="{mbiter.h:170:|{<s0>T|<s1>F}}"];
+	Node0xe0e0690:s0 -> Node0xe0ee810;
+	Node0xe0e0690:s1 -> Node0xe0eb5d0;
+	Node0xe0eb5d0 [shape=record,label="{mbiter.h:170:114}"];
+	Node0xe0ee810 [shape=record,label="{mbiter.h:172:|{<s0>T|<s1>F}}"];
+	Node0xe0ee810:s0 -> Node0xe0e5f00;
+	Node0xe0ee810:s1 -> Node0xe0f2030;
+	Node0xe0f2030 [shape=record,label="{mbiter.h:177:}"];
+	Node0xe0f2030 -> Node0xe0e5f00;
+	Node0xe0e5f00 [shape=record,label="{mbiter.h:180:}"];
+	Node0xe0e5f00 -> Node0xe0d6e90;
+	Node0xe0d6e90 [shape=record,label="{mbiter.h:181:}"];
+}

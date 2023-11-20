@@ -1,0 +1,13 @@
+digraph "CFG for 'triple_compare_ino_str' function" {
+	label="CFG for 'triple_compare_ino_str' function";
+
+	Node0xd28fce0 [shape=record,label="{hash-triple.c:63:|{<s0>T|<s1>F}}"];
+	Node0xd28fce0:s0 -> Node0xd29c310;
+	Node0xd28fce0:s1 -> Node0xd29c210;
+	Node0xd29c310 [shape=record,label="{hash-triple.c:67:|{<s0>T|<s1>F}}"];
+	Node0xd29c310:s0 -> Node0xd29c290;
+	Node0xd29c310:s1 -> Node0xd29c210;
+	Node0xd29c290 [shape=record,label="{hash-triple.c:67:14}"];
+	Node0xd29c290 -> Node0xd29c210;
+	Node0xd29c210 [shape=record,label="{hash-triple.c:67:15}"];
+}

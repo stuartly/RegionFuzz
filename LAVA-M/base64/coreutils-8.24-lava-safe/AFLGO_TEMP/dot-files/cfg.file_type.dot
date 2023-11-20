@@ -1,0 +1,28 @@
+digraph "CFG for 'file_type' function" {
+	label="CFG for 'file_type' function";
+
+	Node0xc391bf0 [shape=record,label="{file-type.c:29:|{<s0>def|<s1>7|<s2>3|<s3>9|<s4>5|<s5>1|<s6>0|<s7>11}}"];
+	Node0xc391bf0:s0 -> Node0xc3a5ce0;
+	Node0xc391bf0:s1 -> Node0xc39c400;
+	Node0xc391bf0:s2 -> Node0xc3391d0;
+	Node0xc391bf0:s3 -> Node0xc1f0de0;
+	Node0xc391bf0:s4 -> Node0xc3a36b0;
+	Node0xc391bf0:s5 -> Node0xc3a3f80;
+	Node0xc391bf0:s6 -> Node0xc3a4b30;
+	Node0xc391bf0:s7 -> Node0xc3a5c90;
+	Node0xc39c400 [shape=record,label="{file-type.c:40:}"];
+	Node0xc39c400 -> Node0xc3391d0;
+	Node0xc1f0de0 [shape=record,label="{file-type.c:46:}"];
+	Node0xc1f0de0 -> Node0xc3391d0;
+	Node0xc3a36b0 [shape=record,label="{file-type.c:66:}"];
+	Node0xc3a36b0 -> Node0xc3391d0;
+	Node0xc3a3f80 [shape=record,label="{file-type.c:69:}"];
+	Node0xc3a3f80 -> Node0xc3391d0;
+	Node0xc3a4b30 [shape=record,label="{file-type.c:75:}"];
+	Node0xc3a4b30 -> Node0xc3391d0;
+	Node0xc3a5c90 [shape=record,label="{file-type.c:105:}"];
+	Node0xc3a5c90 -> Node0xc3391d0;
+	Node0xc3a5ce0 [shape=record,label="{file-type.c:110:}"];
+	Node0xc3a5ce0 -> Node0xc3391d0;
+	Node0xc3391d0 [shape=record,label="{file-type.c:110:72}"];
+}

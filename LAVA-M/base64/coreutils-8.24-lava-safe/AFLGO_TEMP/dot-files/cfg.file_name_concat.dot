@@ -1,0 +1,9 @@
+digraph "CFG for 'file_name_concat' function" {
+	label="CFG for 'file_name_concat' function";
+
+	Node0xd9c82f0 [shape=record,label="{filenamecat.c:35:|{<s0>T|<s1>F}}"];
+	Node0xd9c82f0:s0 -> Node0xd9d1f60;
+	Node0xd9c82f0:s1 -> Node0xd9d1fb0;
+	Node0xd9d1f60 [shape=record,label="{filenamecat.c:39:}"];
+	Node0xd9d1fb0 [shape=record,label="{filenamecat.c:40:}"];
+}

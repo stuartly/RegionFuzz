@@ -1,0 +1,5 @@
+digraph "CFG for 'free_permission_context' function" {
+	label="CFG for 'free_permission_context' function";
+
+	Node0xcdeacd0 [shape=record,label="{acl-internal.c:472:}"];
+}

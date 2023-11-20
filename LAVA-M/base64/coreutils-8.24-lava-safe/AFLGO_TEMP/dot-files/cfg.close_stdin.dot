@@ -1,0 +1,24 @@
+digraph "CFG for 'close_stdin' function" {
+	label="CFG for 'close_stdin' function";
+
+	Node0xd8c97b0 [shape=record,label="{closein.c:81:|{<s0>T|<s1>F}}"];
+	Node0xd8c97b0:s0 -> Node0xdaf20d0;
+	Node0xd8c97b0:s1 -> Node0xdaf1110;
+	Node0xdaf1110 [shape=record,label="{closein.c:91:|{<s0>T|<s1>F}}"];
+	Node0xdaf1110:s0 -> Node0xdaf4c50;
+	Node0xdaf1110:s1 -> Node0xdaf20d0;
+	Node0xdaf4c50 [shape=record,label="{closein.c:91:26}"];
+	Node0xdaf4c50 -> Node0xdaf20d0;
+	Node0xdaf20d0 [shape=record,label="{closein.c:94:|{<s0>T|<s1>F}}"];
+	Node0xdaf20d0:s0 -> Node0xdaf4700;
+	Node0xdaf20d0:s1 -> Node0xdafa1f0;
+	Node0xdaf4700 [shape=record,label="{closein.c:100:|{<s0>T|<s1>F}}"];
+	Node0xdaf4700:s0 -> Node0xdaf7b30;
+	Node0xdaf4700:s1 -> Node0xdaf7a90;
+	Node0xdaf7a90 [shape=record,label="{closein.c:102:}"];
+	Node0xdaf7a90 -> Node0xdafa1a0;
+	Node0xdaf7b30 [shape=record,label="{closein.c:105:}"];
+	Node0xdaf7b30 -> Node0xdafa1a0;
+	Node0xdafa1a0 [shape=record,label="{closein.c:108:}"];
+	Node0xdafa1f0 [shape=record,label="{closein.c:108:27}"];
+}

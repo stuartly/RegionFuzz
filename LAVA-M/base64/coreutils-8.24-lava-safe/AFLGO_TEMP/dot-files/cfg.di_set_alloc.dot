@@ -1,0 +1,15 @@
+digraph "CFG for 'di_set_alloc' function" {
+	label="CFG for 'di_set_alloc' function";
+
+	Node0xcc75f10 [shape=record,label="{di-set.c:115:|{<s0>T|<s1>F}}"];
+	Node0xcc75f10:s0 -> Node0xcc76110;
+	Node0xcc75f10:s1 -> Node0xcc7fdc0;
+	Node0xcc7fdc0 [shape=record,label="{di-set.c:119:|{<s0>T|<s1>F}}"];
+	Node0xcc7fdc0:s0 -> Node0xcbb7020;
+	Node0xcc7fdc0:s1 -> Node0xcab7e30;
+	Node0xcbb7020 [shape=record,label="{di-set.c:124:}"];
+	Node0xcbb7020 -> Node0xcc76110;
+	Node0xcab7e30 [shape=record,label="{di-set.c:127:}"];
+	Node0xcab7e30 -> Node0xcc76110;
+	Node0xcc76110 [shape=record,label="{di-set.c:132:}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'get_permissions' function" {
+	label="CFG for 'get_permissions' function";
+
+	Node0xde43f80 [shape=record,label="{get-permissions.c:33:}"];
+}

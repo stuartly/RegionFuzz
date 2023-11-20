@@ -1,0 +1,20 @@
+digraph "CFG for 'mbslen' function" {
+	label="CFG for 'mbslen' function";
+
+	Node0xc47a680 [shape=record,label="{mbslen.c:29:|{<s0>T|<s1>F}}"];
+	Node0xc47a680:s0 -> Node0xc482790;
+	Node0xc47a680:s1 -> Node0xc482830;
+	Node0xc482790 [shape=record,label="{mbslen.c:34:|{<s0>T|<s1>F}}"];
+	Node0xc482790:s0 -> Node0xc5006f0;
+	Node0xc482790:s1 -> Node0xc488b50;
+	Node0xc5006f0 [shape=record,label="{mbslen.c:37:}"];
+	Node0xc5006f0 -> Node0xc48b9d0;
+	Node0xc48b9d0 [shape=record,label="{mbslen.c:33:|{<s0>T|<s1>F}}"];
+	Node0xc48b9d0:s0 -> Node0xc48b9d0;
+	Node0xc48b9d0:s1 -> Node0xc488b50;
+	Node0xc488b50 [shape=record,label="{mbslen.c:41:}"];
+	Node0xc488b50 -> Node0xc2f0b60;
+	Node0xc482830 [shape=record,label="{mbslen.c:43:}"];
+	Node0xc482830 -> Node0xc2f0b60;
+	Node0xc2f0b60 [shape=record,label="{mbslen.c:44:}"];
+}

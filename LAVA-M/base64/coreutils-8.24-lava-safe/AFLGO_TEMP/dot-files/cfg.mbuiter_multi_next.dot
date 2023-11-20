@@ -1,0 +1,48 @@
+digraph "CFG for 'mbuiter_multi_next' function" {
+	label="CFG for 'mbuiter_multi_next' function";
+
+	Node0xde2ec30 [shape=record,label="{mbuiter.h:132:|{<s0>T|<s1>F}}"];
+	Node0xde2ec30:s0 -> Node0xde3b160;
+	Node0xde2ec30:s1 -> Node0xde2d5e0;
+	Node0xde3b160 [shape=record,label="{mbuiter.h:136:|{<s0>T|<s1>F}}"];
+	Node0xde3b160:s0 -> Node0xddf7730;
+	Node0xde3b160:s1 -> Node0xde99ce0;
+	Node0xde99ce0 [shape=record,label="{mbuiter.h:155:}"];
+	Node0xde99ce0 -> Node0xddf82e0;
+	Node0xddf7730 [shape=record,label="{mbuiter.h:139:|{<s0>T|<s1>F}}"];
+	Node0xddf7730:s0 -> Node0xddf8550;
+	Node0xddf7730:s1 -> Node0xddf8490;
+	Node0xddf8490 [shape=record,label="{mbuiter.h:144:}"];
+	Node0xddf8490 -> Node0xddf84e0;
+	Node0xddf8550 [shape=record,label="{mbuiter.h:150:|{<s0>T|<s1>F}}"];
+	Node0xddf8550:s0 -> Node0xde47320;
+	Node0xddf8550:s1 -> Node0xde473a0;
+	Node0xde47320 [shape=record,label="{mbuiter.h:150:108}"];
+	Node0xde473a0 [shape=record,label="{mbuiter.h:151:}"];
+	Node0xde473a0 -> Node0xddf82e0;
+	Node0xddf82e0 [shape=record,label="{mbuiter.h:155:109|{<s0>def|<s1>-1|<s2>-2|<s3>0}}"];
+	Node0xddf82e0:s0 -> Node0xde4bc40;
+	Node0xddf82e0:s1 -> Node0xde49be0;
+	Node0xddf82e0:s2 -> Node0xde4a920;
+	Node0xddf82e0:s3 -> Node0xddfc9f0;
+	Node0xde49be0 [shape=record,label="{mbuiter.h:159:}"];
+	Node0xde49be0 -> Node0xddf84e0;
+	Node0xde4a920 [shape=record,label="{mbuiter.h:167:}"];
+	Node0xde4a920 -> Node0xddf84e0;
+	Node0xddfc9f0 [shape=record,label="{mbuiter.h:177:|{<s0>T|<s1>F}}"];
+	Node0xddfc9f0:s0 -> Node0xde4c600;
+	Node0xddfc9f0:s1 -> Node0xde4c580;
+	Node0xde4c580 [shape=record,label="{mbuiter.h:178:}"];
+	Node0xde4c600 [shape=record,label="{mbuiter.h:179:|{<s0>T|<s1>F}}"];
+	Node0xde4c600:s0 -> Node0xde4bc40;
+	Node0xde4c600:s1 -> Node0xde4cf60;
+	Node0xde4cf60 [shape=record,label="{mbuiter.h:179:110}"];
+	Node0xde4bc40 [shape=record,label="{mbuiter.h:181:|{<s0>T|<s1>F}}"];
+	Node0xde4bc40:s0 -> Node0xddf84e0;
+	Node0xde4bc40:s1 -> Node0xde4dc90;
+	Node0xde4dc90 [shape=record,label="{mbuiter.h:186:}"];
+	Node0xde4dc90 -> Node0xddf84e0;
+	Node0xddf84e0 [shape=record,label="{mbuiter.h:189:}"];
+	Node0xddf84e0 -> Node0xde2d5e0;
+	Node0xde2d5e0 [shape=record,label="{mbuiter.h:190:}"];
+}

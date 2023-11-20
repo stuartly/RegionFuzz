@@ -1,0 +1,26 @@
+digraph "CFG for 'heap_remove_top' function" {
+	label="CFG for 'heap_remove_top' function";
+
+	Node0xd7e0de0 [shape=record,label="{heap.c:94:|{<s0>T|<s1>F}}"];
+	Node0xd7e0de0:s0 -> Node0xd7eea10;
+	Node0xd7e0de0:s1 -> Node0xd7e6b60;
+	Node0xd7e6b60 [shape=record,label="{heap.c:101:|{<s0>T|<s1>F}}"];
+	Node0xd7e6b60:s0 -> Node0xd8976b0;
+	Node0xd7e6b60:s1 -> Node0xd7ec200;
+	Node0xd7ec200 [shape=record,label="{heap.c:119:}"];
+	Node0xd7ec200 -> Node0xd800c80;
+	Node0xd800c80 [shape=record,label="{heap.c:116:|{<s0>T|<s1>F}}"];
+	Node0xd800c80:s0 -> Node0xd7f3270;
+	Node0xd800c80:s1 -> Node0xd7feb60;
+	Node0xd7f3270 [shape=record,label="{heap.c:121:}"];
+	Node0xd7f3270 -> Node0xd7feb60;
+	Node0xd7feb60 [shape=record,label="{heap.c:119:16|{<s0>T|<s1>F}}"];
+	Node0xd7feb60:s0 -> Node0xd8976b0;
+	Node0xd7feb60:s1 -> Node0xd899fd0;
+	Node0xd899fd0 [shape=record,label="{heap.c:127:|{<s0>T|<s1>F}}"];
+	Node0xd899fd0:s0 -> Node0xd8976b0;
+	Node0xd899fd0:s1 -> Node0xd800c80;
+	Node0xd8976b0 [shape=record,label="{heap.c:116:17}"];
+	Node0xd8976b0 -> Node0xd7eea10;
+	Node0xd7eea10 [shape=record,label="{heap.c:106:}"];
+}

@@ -1,0 +1,21 @@
+lib/gl_xlist.o: lib/gl_xlist.c lib/config.h lib/gl_xlist.h lib/gl_list.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdbool.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h \
+  lib/xalloc.h lib/xalloc-oversized.h
+
+lib/config.h:
+
+lib/gl_xlist.h:
+
+lib/gl_list.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdbool.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h:
+
+lib/xalloc.h:
+
+lib/xalloc-oversized.h:

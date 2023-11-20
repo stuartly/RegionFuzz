@@ -1,0 +1,12 @@
+digraph "CFG for 'set_cloexec_flag' function" {
+	label="CFG for 'set_cloexec_flag' function";
+
+	Node0xd4f0a10 [shape=record,label="{cloexec.c:39:|{<s0>T|<s1>F}}"];
+	Node0xd4f0a10:s0 -> Node0xd4fa0c0;
+	Node0xd4f0a10:s1 -> Node0xd4fc1a0;
+	Node0xd4fa0c0 [shape=record,label="{cloexec.c:47:|{<s0>T|<s1>F}}"];
+	Node0xd4fa0c0:s0 -> Node0xd4fc1a0;
+	Node0xd4fa0c0:s1 -> Node0xd4fb440;
+	Node0xd4fb440 [shape=record,label="{cloexec.c:50:}"];
+	Node0xd4fc1a0 [shape=record,label="{cloexec.c:72:}"];
+}

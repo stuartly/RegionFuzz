@@ -1,0 +1,13 @@
+digraph "CFG for 'dtotimespec' function" {
+	label="CFG for 'dtotimespec' function";
+
+	Node0xd3f1c00 [shape=record,label="{dtotimespec.c:30:|{<s0>T|<s1>F}}"];
+	Node0xd3f1c00:s0 -> Node0xd3fc600;
+	Node0xd3f1c00:s1 -> Node0xd3fbbe0;
+	Node0xd3fc600 [shape=record,label="{dtotimespec.c:40:|{<s0>T|<s1>F}}"];
+	Node0xd3fc600:s0 -> Node0xd3fdb40;
+	Node0xd3fc600:s1 -> Node0xd3fbbe0;
+	Node0xd3fdb40 [shape=record,label="{dtotimespec.c:44:}"];
+	Node0xd3fdb40 -> Node0xd3fbbe0;
+	Node0xd3fbbe0 [shape=record,label="{dtotimespec.c:59:}"];
+}

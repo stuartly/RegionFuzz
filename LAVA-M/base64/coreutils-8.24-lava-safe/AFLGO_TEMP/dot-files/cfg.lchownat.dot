@@ -1,0 +1,5 @@
+digraph "CFG for 'lchownat' function" {
+	label="CFG for 'lchownat' function";
+
+	Node0xc929930 [shape=record,label="{openat.h:68:}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for 'glthread_once_singlethreaded' function" {
+	label="CFG for 'glthread_once_singlethreaded' function";
+
+	Node0xda87760 [shape=record,label="{lock.c:457:|{<s0>T|<s1>F}}"];
+	Node0xda87760:s0 -> Node0xda9ce70;
+	Node0xda87760:s1 -> Node0xda98a40;
+	Node0xda9ce70 [shape=record,label="{lock.c:465:}"];
+	Node0xda9ce70 -> Node0xda98a40;
+	Node0xda98a40 [shape=record,label="{lock.c:470:}"];
+}

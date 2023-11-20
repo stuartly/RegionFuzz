@@ -1,0 +1,16 @@
+digraph "CFG for 'dir_len' function" {
+	label="CFG for 'dir_len' function";
+
+	Node0xc29cda0 [shape=record,label="{dirname-lgpl.c:32:|{<s0>T|<s1>F}}"];
+	Node0xc29cda0:s0 -> Node0xc3508c0;
+	Node0xc29cda0:s1 -> Node0xc2a6b90;
+	Node0xc3508c0 [shape=record,label="{dirname-lgpl.c:50:}"];
+	Node0xc3508c0 -> Node0xc2a7420;
+	Node0xc2a7890 [shape=record,label="{dirname-lgpl.c:35:|{<s0>T|<s1>F}}"];
+	Node0xc2a7890:s0 -> Node0xc2a7420;
+	Node0xc2a7890:s1 -> Node0xc2a6b90;
+	Node0xc2a7420 [shape=record,label="{dirname-lgpl.c:35:24|{<s0>T|<s1>F}}"];
+	Node0xc2a7420:s0 -> Node0xc2a7890;
+	Node0xc2a7420:s1 -> Node0xc2a6b90;
+	Node0xc2a6b90 [shape=record,label="{dirname-lgpl.c:52:}"];
+}

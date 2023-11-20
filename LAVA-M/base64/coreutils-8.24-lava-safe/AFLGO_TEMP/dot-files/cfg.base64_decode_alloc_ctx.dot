@@ -1,0 +1,18 @@
+digraph "CFG for 'base64_decode_alloc_ctx' function" {
+	label="CFG for 'base64_decode_alloc_ctx' function";
+
+	Node0xd27a6e0 [shape=record,label="{base64.c:685:|{<s0>T|<s1>F}}"];
+	Node0xd27a6e0:s0 -> Node0xd2e8b50;
+	Node0xd27a6e0:s1 -> Node0xd2e8650;
+	Node0xd2e8650 [shape=record,label="{base64.c:694:|{<s0>T|<s1>F}}"];
+	Node0xd2e8650:s0 -> Node0xd2e8da0;
+	Node0xd2e8650:s1 -> Node0xd2e8d30;
+	Node0xd2e8d30 [shape=record,label="{base64.c:702:}"];
+	Node0xd2e8d30 -> Node0xd2e8b50;
+	Node0xd2e8da0 [shape=record,label="{base64.c:707:|{<s0>T|<s1>F}}"];
+	Node0xd2e8da0:s0 -> Node0xd2e8b50;
+	Node0xd2e8da0:s1 -> Node0xd28a8b0;
+	Node0xd28a8b0 [shape=record,label="{base64.c:708:}"];
+	Node0xd28a8b0 -> Node0xd2e8b50;
+	Node0xd2e8b50 [shape=record,label="{base64.c:711:}"];
+}

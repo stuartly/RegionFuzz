@@ -1,0 +1,5 @@
+digraph "CFG for 'sha512_init_ctx' function" {
+	label="CFG for 'sha512_init_ctx' function";
+
+	Node0xcd31640 [shape=record,label="{sha512.c:70:}"];
+}

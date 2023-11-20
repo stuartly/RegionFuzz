@@ -1,0 +1,5 @@
+digraph "CFG for 'areadlinkat' function" {
+	label="CFG for 'areadlinkat' function";
+
+	Node0xcdf4ee0 [shape=record,label="{areadlinkat.c:40:}"];
+}

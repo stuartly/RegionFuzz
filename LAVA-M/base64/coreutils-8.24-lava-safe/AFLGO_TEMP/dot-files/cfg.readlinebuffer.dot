@@ -1,0 +1,37 @@
+digraph "CFG for 'readlinebuffer' function" {
+	label="CFG for 'readlinebuffer' function";
+
+	Node0xd4dfc50 [shape=record,label="{linebuffer.c:43:|{<s0>T|<s1>F}}"];
+	Node0xd4dfc50:s0 -> Node0xd564bb0;
+	Node0xd4dfc50:s1 -> Node0xd598ef0;
+	Node0xd564bb0 [shape=record,label="{linebuffer.c:65:}"];
+	Node0xd564bb0 -> Node0xd58fa40;
+	Node0xd58fa40 [shape=record,label="{linebuffer.c:65:1|{<s0>T|<s1>F}}"];
+	Node0xd58fa40:s0 -> Node0xd598640["];
+	Node0xd58fa40:s1 -> Node0xd58cfb0["];
+	Node0xd598640 [shape=record,label="{linebuffer.c:62:}"];
+	Node0xd598640 -> Node0xd58d2b0;
+	Node0xd58cfb0 [shape=record,label="{linebuffer.c:62:2|{<s0>T|<s1>F}}"];
+	Node0xd58cfb0:s0 -> Node0xd597db0;
+	Node0xd58cfb0:s1 -> Node0xd58d2b0;
+	Node0xd597db0 [shape=record,label="{linebuffer.c:75:|{<s0>T|<s1>F}}"];
+	Node0xd597db0:s0 -> Node0xd598ef0;
+	Node0xd597db0:s1 -> Node0xd598040;
+	Node0xd598040 [shape=record,label="{linebuffer.c:75:3|{<s0>T|<s1>F}}"];
+	Node0xd598040:s0 -> Node0xd598390;
+	Node0xd598040:s1 -> Node0xd598ef0;
+	Node0xd598390 [shape=record,label="{linebuffer.c:77:|{<s0>T|<s1>F}}"];
+	Node0xd598390:s0 -> Node0xd594d80;
+	Node0xd598390:s1 -> Node0xd58d2b0;
+	Node0xd58d2b0 [shape=record,label="{linebuffer.c:62:4|{<s0>T|<s1>F}}"];
+	Node0xd58d2b0:s0 -> Node0xd595520;
+	Node0xd58d2b0:s1 -> Node0xd5938f0;
+	Node0xd595520 [shape=record,label="{linebuffer.c:83:}"];
+	Node0xd595520 -> Node0xd5938f0;
+	Node0xd5938f0 [shape=record,label="{linebuffer.c:65:5|{<s0>T|<s1>F}}"];
+	Node0xd5938f0:s0 -> Node0xd594d80;
+	Node0xd5938f0:s1 -> Node0xd58fa40;
+	Node0xd594d80 [shape=record,label="{linebuffer.c:64:}"];
+	Node0xd594d80 -> Node0xd598ef0;
+	Node0xd598ef0 [shape=record,label="{linebuffer.c:45:}"];
+}

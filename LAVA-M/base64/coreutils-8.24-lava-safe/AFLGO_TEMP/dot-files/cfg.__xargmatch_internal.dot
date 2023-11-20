@@ -1,0 +1,10 @@
+digraph "CFG for '__xargmatch_internal' function" {
+	label="CFG for '__xargmatch_internal' function";
+
+	Node0xc5cce50 [shape=record,label="{argmatch.c:175:|{<s0>T|<s1>F}}"];
+	Node0xc5cce50:s0 -> Node0xc5c83e0;
+	Node0xc5cce50:s1 -> Node0xc5c8000;
+	Node0xc5c8000 [shape=record,label="{argmatch.c:130:}"];
+	Node0xc5c8000 -> Node0xc5c83e0;
+	Node0xc5c83e0 [shape=record,label="{argmatch.c:191:}"];
+}

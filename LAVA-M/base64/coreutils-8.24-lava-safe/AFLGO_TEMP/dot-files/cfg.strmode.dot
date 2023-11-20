@@ -1,0 +1,10 @@
+digraph "CFG for 'strmode' function" {
+	label="CFG for 'strmode' function";
+
+	Node0xcf24df0 [shape=record,label="{filemode.c:96:|{<s0>T|<s1>F}}"];
+	Node0xcf24df0:s0 -> Node0xcf43ab0;
+	Node0xcf24df0:s1 -> Node0xcf2de80;
+	Node0xcf43ab0 [shape=record,label="{filemode.c:57:}"];
+	Node0xcf43ab0 -> Node0xcf2de80;
+	Node0xcf2de80 [shape=record,label="{filemode.c:98:}"];
+}

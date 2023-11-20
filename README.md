@@ -28,7 +28,7 @@ make && make install
 # Demo
 
 ```
-cd Benchmark/LAVA-M/base64
+cd LAVA-M/base64
 bash Run.sh
 
 ```

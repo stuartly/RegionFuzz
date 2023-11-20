@@ -1,0 +1,13 @@
+digraph "CFG for 'mmalloca' function" {
+	label="CFG for 'mmalloca' function";
+
+	Node0xc44c3d0 [shape=record,label="{malloca.c:74:|{<s0>T|<s1>F}}"];
+	Node0xc44c3d0:s0 -> Node0xc456820;
+	Node0xc44c3d0:s1 -> Node0xc45cad0;
+	Node0xc456820 [shape=record,label="{malloca.c:79:|{<s0>T|<s1>F}}"];
+	Node0xc456820:s0 -> Node0xc45cad0;
+	Node0xc456820:s1 -> Node0xc45c780;
+	Node0xc45c780 [shape=record,label="{malloca.c:88:}"];
+	Node0xc45c780 -> Node0xc45cad0;
+	Node0xc45cad0 [shape=record,label="{malloca.c:112:}"];
+}

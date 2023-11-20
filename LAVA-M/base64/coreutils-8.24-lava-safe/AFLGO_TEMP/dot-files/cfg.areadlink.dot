@@ -1,0 +1,5 @@
+digraph "CFG for 'areadlink' function" {
+	label="CFG for 'areadlink' function";
+
+	Node0xd92c1e0 [shape=record,label="{areadlink.c:53:}"];
+}

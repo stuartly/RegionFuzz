@@ -1,0 +1,10 @@
+digraph "CFG for 'fd_safer_flag' function" {
+	label="CFG for 'fd_safer_flag' function";
+
+	Node0xc47c400 [shape=record,label="{fd-safer-flag.c:40:|{<s0>T|<s1>F}}"];
+	Node0xc47c400:s0 -> Node0xc484450;
+	Node0xc47c400:s1 -> Node0xc4844a0;
+	Node0xc484450 [shape=record,label="{fd-safer-flag.c:44:}"];
+	Node0xc484450 -> Node0xc4844a0;
+	Node0xc4844a0 [shape=record,label="{fd-safer-flag.c:40:11}"];
+}

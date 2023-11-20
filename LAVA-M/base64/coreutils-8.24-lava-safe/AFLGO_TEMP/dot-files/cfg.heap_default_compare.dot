@@ -1,0 +1,5 @@
+digraph "CFG for 'heap_default_compare' function" {
+	label="CFG for 'heap_default_compare' function";
+
+	Node0xd7ee3d0 [shape=record,label="{heap.c:63:}"];
+}

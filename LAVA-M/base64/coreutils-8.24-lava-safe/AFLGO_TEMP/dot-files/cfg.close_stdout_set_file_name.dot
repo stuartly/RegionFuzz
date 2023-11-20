@@ -1,0 +1,5 @@
+digraph "CFG for 'close_stdout_set_file_name' function" {
+	label="CFG for 'close_stdout_set_file_name' function";
+
+	Node0xcdd83b0 [shape=record,label="{closeout.c:41:}"];
+}

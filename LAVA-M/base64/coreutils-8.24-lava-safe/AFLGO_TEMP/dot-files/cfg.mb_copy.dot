@@ -1,0 +1,17 @@
+digraph "CFG for 'mb_copy' function" {
+	label="CFG for 'mb_copy' function";
+
+	Node0xe1aac10 [shape=record,label="{mbchar.h:268:|{<s0>T|<s1>F}}"];
+	Node0xe1aac10:s0 -> Node0xe1b3ad0;
+	Node0xe1aac10:s1 -> Node0xe1eb2c0;
+	Node0xe1eb2c0 [shape=record,label="{mbchar.h:277:}"];
+	Node0xe1eb2c0 -> Node0xe1b3b20;
+	Node0xe1b3ad0 [shape=record,label="{mbchar.h:272:}"];
+	Node0xe1b3ad0 -> Node0xe1b3b20;
+	Node0xe1b3b20 [shape=record,label="{mbchar.h:277:30|{<s0>T|<s1>F}}"];
+	Node0xe1b3b20:s0 -> Node0xe1a2690;
+	Node0xe1b3b20:s1 -> Node0xe1b4ec0;
+	Node0xe1b4ec0 [shape=record,label="{mbchar.h:279:}"];
+	Node0xe1b4ec0 -> Node0xe1a2690;
+	Node0xe1a2690 [shape=record,label="{mbchar.h:280:}"];
+}

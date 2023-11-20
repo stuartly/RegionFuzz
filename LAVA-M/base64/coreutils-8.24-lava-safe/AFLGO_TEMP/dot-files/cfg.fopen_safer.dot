@@ -1,0 +1,24 @@
+digraph "CFG for 'fopen_safer' function" {
+	label="CFG for 'fopen_safer' function";
+
+	Node0xd407bf0 [shape=record,label="{fopen-safer.c:31:|{<s0>T|<s1>F}}"];
+	Node0xd407bf0:s0 -> Node0xd4b0b20;
+	Node0xd407bf0:s1 -> Node0xd4aac80;
+	Node0xd4aac80 [shape=record,label="{fopen-safer.c:37:|{<s0>T|<s1>F}}"];
+	Node0xd4aac80:s0 -> Node0xd4abdd0;
+	Node0xd4aac80:s1 -> Node0xd4b0b20;
+	Node0xd4abdd0 [shape=record,label="{fopen-safer.c:41:|{<s0>T|<s1>F}}"];
+	Node0xd4abdd0:s0 -> Node0xd4aac30;
+	Node0xd4abdd0:s1 -> Node0xd4acd00;
+	Node0xd4aac30 [shape=record,label="{fopen-safer.c:45:}"];
+	Node0xd4aac30 -> Node0xd4b0b20;
+	Node0xd4acd00 [shape=record,label="{fopen-safer.c:51:|{<s0>T|<s1>F}}"];
+	Node0xd4acd00:s0 -> Node0xd4ab500;
+	Node0xd4acd00:s1 -> Node0xd4adf90;
+	Node0xd4ab500 [shape=record,label="{fopen-safer.c:52:|{<s0>T|<s1>F}}"];
+	Node0xd4ab500:s0 -> Node0xd4adf90;
+	Node0xd4ab500:s1 -> Node0xd4b0b20;
+	Node0xd4adf90 [shape=record,label="{fopen-safer.c:54:}"];
+	Node0xd4adf90 -> Node0xd4b0b20;
+	Node0xd4b0b20 [shape=record,label="{fopen-safer.c:63:}"];
+}

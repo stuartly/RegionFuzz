@@ -1,0 +1,23 @@
+digraph "CFG for 'opendir_safer' function" {
+	label="CFG for 'opendir_safer' function";
+
+	Node0xc76c980 [shape=record,label="{opendir-safer.c:31:|{<s0>T|<s1>F}}"];
+	Node0xc76c980:s0 -> Node0xc7784c0;
+	Node0xc76c980:s1 -> Node0xc778470;
+	Node0xc778470 [shape=record,label="{opendir-safer.c:37:|{<s0>T|<s1>F}}"];
+	Node0xc778470:s0 -> Node0xc779580;
+	Node0xc778470:s1 -> Node0xc7784c0;
+	Node0xc779580 [shape=record,label="{opendir-safer.c:52:|{<s0>T|<s1>F}}"];
+	Node0xc779580:s0 -> Node0xc77b380;
+	Node0xc779580:s1 -> Node0xc77b420;
+	Node0xc77b380 [shape=record,label="{opendir-safer.c:55:}"];
+	Node0xc77b380 -> Node0xc77b3d0;
+	Node0xc77b420 [shape=record,label="{opendir-safer.c:60:|{<s0>T|<s1>F}}"];
+	Node0xc77b420:s0 -> Node0xc77c7e0;
+	Node0xc77b420:s1 -> Node0xc77b3d0;
+	Node0xc77c7e0 [shape=record,label="{opendir-safer.c:63:}"];
+	Node0xc77c7e0 -> Node0xc77b3d0;
+	Node0xc77b3d0 [shape=record,label="{opendir-safer.c:70:}"];
+	Node0xc77b3d0 -> Node0xc7784c0;
+	Node0xc7784c0 [shape=record,label="{opendir-safer.c:33:}"];
+}

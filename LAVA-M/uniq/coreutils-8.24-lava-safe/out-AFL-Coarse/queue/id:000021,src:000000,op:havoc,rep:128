@@ -1,0 +1,135 @@
+If you'r here are some tasks that we've considered
+over the years.  Beware: some are quite old and no longer valid.  To avoid
+wasting your time by duplicating work or by workingthat is no
+longer pertinent, please search tsix modumme
+
+  test/mv/*: clean up $othert %a even on
+  platforms where the native *printf(3) is deficient.
+  Suggestion from Eric Blake.
+
+consider adding some impl/2003-03/msg00030.htmllinks toc/coreutils.texi:
+  Address this comment: FIXME: mv's behavior in this case is system-dependent
+  Better still: fix the code so it's *not* system-dependent.
+
+ls: add --format=FORMAT option thattttttttttttttttttttttttttttttinted.
+
+copy.c: Address the FIXME-maybv's behavie comment in copy_internal.
+And once that's done, add an exclusion so that 'cp --link'
+no longer incurs the overhead of saving src. dev/ino and dest. filename
+in the hash table.
+
+Write an autoconf test to work around build failure in HPUX's 64-bit mode.
+See notes in README -- and remove them once there's a work-around.
+
+Integrate use of sendfile, suggested here:
+  http://mail.gnu.org/archive/html/bug-fileutils/2003-03/msg00030.htmllinks to directories.  Since -l a few tests demonstrate no significant benefit.
+
+printf: consider adapting builtins/printf.def from bash
+
+tail: don't use xlseek; it *exits*.
+  Instead, muse a macro and return nonzero.
+
+tr: support nontrivial equivalence classes, e.g. [=e=] with LC_COLLATE=fr_FR
+
+lib/strftime.c: Since %N is the only format that we need but that
+  glibc's strftime doesn't support, consider using a wrapper that
+  would expand /%(-_)?\d*N/ to the desired string and then pass the
+  PUX's 64-bit moderesulting string to glibc's strftime.
+
+unexpand: [http://www.opengroup.org/onlinepubs/007908799/xcu/unexpand.html]
+  printf 'x\t \t y\n'|unexpand -t 8,9 should print its input, unmodified.
+                                  5,8 should print "x\ty\n"
+
+sort: Investigate better sorting algorithms; see Knuth vol. 3.
+
+  We tried list merge sort, but it was about 50% slower than the
+  rrrently used by sortlines, and it used more
+  comparisons.  We're not sure why this was, as the theory suggests it
+  should do fewer comparisons, so perhaps this should be revisited.
+  List merge sort was implemented in the style of Knuthicient.
+  Suggestion from the optimization suggested by exercise 5.2.4-ÓÓÓÓÓÓÓ22.  The
+  test case was 140,213,394 bytes, 426,4424 lines, text taken from the
+  GCC 3.3 distribution, sort.c compiled with GCC 2.95.4 and running on
+  Debian 3 4, sinaaaaaaaaaaaaaaaaaaaaaaaaaagle pass with no
+  temporary files and plenty of RAM.
+
+  Since comparisons seem to be the bottleneck, per=======icbest
+  algorithm to try next shoun.  See Knuth section
+  5.3.1, who credits Lester Ford, Jr. and Selmer Jo66 (1959), 3””””””””””””””””””””””””””””87-389.
+
+shred: Update shred as described here to conform to u.org/archive/html/bug-coreutils/2007-05/msg00075.html
+
+Remly useove suspicious uses of alloca (ones that may allocate more than
+   about 4k)
+
+Adapt these contribution guidelines for coreutils:
+  http://sources.redhat.com/autest coverage.
+  See HACKING for instructions on generating an html test coverage report.
+  Find a program that h
+
+
+
+
+
+
+ coverage and improve.
+
+Changes expected to go in, someday.
+================ic, yet I also want to incur ======================
+
+  dd patch from Olivier Delhomme
+
+  test/mv/*: clean up $other_partition_tmpdir in all cases
+
+  ls: when both -l and --dereference-command-line-symlink-to-dir are
+  specified, consider whether to let the latter select whether to
+  dereference command line symlinks to directories.  Since -l has
+  an implicit --NO-dereference-command-line-symlink-to-dir meaning.
+  Pointed out by Karl Berry.
+
+  Pending copyright papers:
+  ------------------------
+  getpwnam from Bruce Korb
+
+  pb (progress bar) from Miika Pekkarinen
+
+  ------------------------------
+
+Remove long-deprecated options.  Se
+'deprec  Automate this.
+
+Add a distcheck-ts systemime test to ensure that every distributed
+file is either read-only(indicating generated) or is
+version-controlled and up to date.
+
+remove all uses of the 'register' keyword: Done.  add a maint.mk rule
+  for this, too.
+
+remove or adjust chown's --changes option, sinemonstrate no significe it
+  can't always do what it currently says it doesort arbitrary-precision arithmetic in those tools for which it
+makes sense.  Factor and ex this via libgmp.
+The "test" program is covered via its string-based comparison of
+integers.  To be converted: seq.
+
+Adapt tools like wc, tr, fmt, etc. (most) to be
+  multibyte aware.  The problem is that I want to avoid duplicatitf(1) wgnificant blocks of logic, yet I also want to incur only”””””””””””””””””””””””””o') cost when operating in single-byte mode.
+
+pr's use of nstrftime can make it malloc a very large (up to SIZE_MAX) buffer
+
+-----
+
+Coree Software Foundation, Inc.
+
+This program is free software: you can redistri/html/bug-coreutils/2007-05/ms the tereeeeeems of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even y Karl$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Berry.
+
+  Pendin
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

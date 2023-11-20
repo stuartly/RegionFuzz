@@ -1,0 +1,15 @@
+digraph "CFG for 'glthread_recursive_lock_init_multithreaded' function" {
+	label="CFG for 'glthread_recursive_lock_init_multithreaded' function";
+
+	Node0xda87bd0 [shape=record,label="{lock.c:284:|{<s0>T|<s1>F}}"];
+	Node0xda87bd0:s0 -> Node0xda966a0;
+	Node0xda87bd0:s1 -> Node0xda96b50;
+	Node0xda966a0 [shape=record,label="{lock.c:286:|{<s0>T|<s1>F}}"];
+	Node0xda966a0:s0 -> Node0xda97480;
+	Node0xda966a0:s1 -> Node0xda97430;
+	Node0xda97430 [shape=record,label="{lock.c:295:}"];
+	Node0xda97430 -> Node0xda96b50;
+	Node0xda97480 [shape=record,label="{lock.c:298:}"];
+	Node0xda97480 -> Node0xda96b50;
+	Node0xda96b50 [shape=record,label="{lock.c:308:}"];
+}

@@ -1,0 +1,9 @@
+digraph "CFG for 'check_for_SIGALRM' function" {
+	label="CFG for 'check_for_SIGALRM' function";
+
+	Node0xcf5a520 [shape=record,label="{conftest.c:481:|{<s0>T|<s1>F}}"];
+	Node0xcf5a520:s0 -> Node0xcf6ebd0;
+	Node0xcf5a520:s1 -> Node0xcf6eb80;
+	Node0xcf6eb80 [shape=record,label="{conftest.c:484:}"];
+	Node0xcf6ebd0 [shape=record,label="{conftest.c:485:}"];
+}

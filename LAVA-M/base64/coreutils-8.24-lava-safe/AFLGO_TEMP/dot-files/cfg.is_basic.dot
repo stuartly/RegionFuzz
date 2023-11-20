@@ -1,0 +1,5 @@
+digraph "CFG for 'is_basic' function" {
+	label="CFG for 'is_basic' function";
+
+	Node0xe1ad0b0 [shape=record,label="{mbchar.h:316:}"];
+}

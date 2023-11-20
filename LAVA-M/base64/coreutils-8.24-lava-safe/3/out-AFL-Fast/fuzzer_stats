@@ -1,0 +1,27 @@
+start_time        : 1562228898
+last_update       : 1562294014
+fuzzer_pid        : 90849
+cycles_done       : 4
+execs_done        : 35992720
+execs_per_sec     : 277.72
+paths_total       : 153
+paths_favored     : 5
+paths_found       : 132
+paths_imported    : 0
+max_depth         : 4
+cur_path          : 151
+pending_favs      : 1
+pending_total     : 69
+variable_paths    : 0
+stability         : 100.00%
+bitmap_cvg        : 0.57%
+unique_crashes    : 3
+unique_hangs      : 0
+last_path         : 1562280686
+last_crash        : 1562272247
+last_hang         : 0
+execs_since_crash : 10933524
+exec_timeout      : 20
+afl_banner        : base64
+afl_version       : 2.51b
+command_line      : /home/stly/Documents/NjorthFuzz/afl-fast-fuzz -i ../fuzz_seed -o out-AFL-Fast ./installed-Org/bin/base64 -d @@

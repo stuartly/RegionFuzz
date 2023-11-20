@@ -1,0 +1,26 @@
+digraph "CFG for 'test_varargs' function" {
+	label="CFG for 'test_varargs' function";
+
+	Node0xcffa2d0 [shape=record,label="{conftest.c:75:|{<s0>T|<s1>F}}"];
+	Node0xcffa2d0:s0 -> Node0xd015010;
+	Node0xcffa2d0:s1 -> Node0xd015090;
+	Node0xd015010 [shape=record,label="{conftest.c:89:}"];
+	Node0xd015010 -> Node0xd017290;
+	Node0xd015090 [shape=record,label="{conftest.c:89:38}"];
+	Node0xd015090 -> Node0xd017290;
+	Node0xd017290 [shape=record,label="{conftest.c:92:|{<s0>T|<s1>F}}"];
+	Node0xd017290:s0 -> Node0xd0c9050;
+	Node0xd017290:s1 -> Node0xd017560;
+	Node0xd017560 [shape=record,label="{conftest.c:92:39}"];
+	Node0xd017560 -> Node0xd0c7060;
+	Node0xd0c9050 [shape=record,label="{conftest.c:92:40}"];
+	Node0xd0c9050 -> Node0xd0c7060;
+	Node0xd0c7060 [shape=record,label="{conftest.c:95:|{<s0>T|<s1>F}}"];
+	Node0xd0c7060:s0 -> Node0xd0cf0b0;
+	Node0xd0c7060:s1 -> Node0xd0ceda0;
+	Node0xd0ceda0 [shape=record,label="{conftest.c:95:41}"];
+	Node0xd0ceda0 -> Node0xd0b0f60;
+	Node0xd0cf0b0 [shape=record,label="{conftest.c:95:42}"];
+	Node0xd0cf0b0 -> Node0xd0b0f60;
+	Node0xd0b0f60 [shape=record,label="{conftest.c:101:}"];
+}

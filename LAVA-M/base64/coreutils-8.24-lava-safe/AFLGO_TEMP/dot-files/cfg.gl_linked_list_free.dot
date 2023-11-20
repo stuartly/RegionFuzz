@@ -1,0 +1,21 @@
+digraph "CFG for 'gl_linked_list_free' function" {
+	label="CFG for 'gl_linked_list_free' function";
+
+	Node0xc75f000 [shape=record,label="{gl_anylinked_list2.h:896:|{<s0>T|<s1>F}}"];
+	Node0xc75f000:s0 -> Node0xc789720;
+	Node0xc75f000:s1 -> Node0xc78e650;
+	Node0xc78e650 [shape=record,label="{gl_anylinked_list2.h:901:|{<s0>T|<s1>F}}"];
+	Node0xc78e650:s0 -> Node0xc789b80;
+	Node0xc78e650:s1 -> Node0xc756270;
+	Node0xc756270 [shape=record,label="{gl_anylinked_list2.h:903:}"];
+	Node0xc756270 -> Node0xc789d60;
+	Node0xc789b80 [shape=record,label="{gl_anylinked_list2.h:903:22}"];
+	Node0xc789b80 -> Node0xc76e8c0;
+	Node0xc76e8c0 [shape=record,label="{gl_anylinked_list2.h:899:|{<s0>T|<s1>F}}"];
+	Node0xc76e8c0:s0 -> Node0xc789720;
+	Node0xc76e8c0:s1 -> Node0xc76e8c0;
+	Node0xc789d60 [shape=record,label="{gl_anylinked_list2.h:899:23|{<s0>T|<s1>F}}"];
+	Node0xc789d60:s0 -> Node0xc789720;
+	Node0xc789d60:s1 -> Node0xc789d60;
+	Node0xc789720 [shape=record,label="{gl_anylinked_list2.h:912:}"];
+}

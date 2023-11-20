@@ -1,0 +1,5 @@
+digraph "CFG for 'rotr_sz' function" {
+	label="CFG for 'rotr_sz' function";
+
+	Node0xc7a4d80 [shape=record,label="{bitrotate.h:85:}"];
+}

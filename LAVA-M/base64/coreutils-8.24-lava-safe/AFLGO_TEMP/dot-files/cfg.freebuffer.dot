@@ -1,0 +1,5 @@
+digraph "CFG for 'freebuffer' function" {
+	label="CFG for 'freebuffer' function";
+
+	Node0xd4e77c0 [shape=record,label="{linebuffer.c:100:}"];
+}

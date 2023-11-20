@@ -1,0 +1,15 @@
+digraph "CFG for 'ino_map_alloc' function" {
+	label="CFG for 'ino_map_alloc' function";
+
+	Node0xd841940 [shape=record,label="{ino-map.c:83:|{<s0>T|<s1>F}}"];
+	Node0xd841940:s0 -> Node0xd84f8c0;
+	Node0xd841940:s1 -> Node0xd84d140;
+	Node0xd84d140 [shape=record,label="{ino-map.c:90:|{<s0>T|<s1>F}}"];
+	Node0xd84d140:s0 -> Node0xd7ec3d0;
+	Node0xd84d140:s1 -> Node0xd84efc0;
+	Node0xd7ec3d0 [shape=record,label="{ino-map.c:94:}"];
+	Node0xd7ec3d0 -> Node0xd84f8c0;
+	Node0xd84efc0 [shape=record,label="{ino-map.c:97:}"];
+	Node0xd84efc0 -> Node0xd84f8c0;
+	Node0xd84f8c0 [shape=record,label="{ino-map.c:102:}"];
+}

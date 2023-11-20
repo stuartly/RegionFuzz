@@ -1,0 +1,5 @@
+digraph "CFG for 'sha256_buffer' function" {
+	label="CFG for 'sha256_buffer' function";
+
+	Node0xcf7bce0 [shape=record,label="{sha256.c:322:}"];
+}

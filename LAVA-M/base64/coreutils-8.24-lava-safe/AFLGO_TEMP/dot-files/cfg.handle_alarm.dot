@@ -1,0 +1,9 @@
+digraph "CFG for 'handle_alarm' function" {
+	label="CFG for 'handle_alarm' function";
+
+	Node0xc2f65d0 [shape=record,label="{conftest.c:637:|{<s0>T|<s1>F}}"];
+	Node0xc2f65d0:s0 -> Node0xc35afd0;
+	Node0xc2f65d0:s1 -> Node0xc35aa90;
+	Node0xc35aa90 [shape=record,label="{conftest.c:640:}"];
+	Node0xc35afd0 [shape=record,label="{conftest.c:641:}"];
+}

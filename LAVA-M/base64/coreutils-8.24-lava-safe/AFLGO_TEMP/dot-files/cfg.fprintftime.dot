@@ -1,0 +1,5 @@
+digraph "CFG for 'fprintftime' function" {
+	label="CFG for 'fprintftime' function";
+
+	Node0xc19ea20 [shape=record,label="{strftime.copy.c:1465:}"];
+}

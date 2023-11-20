@@ -1,0 +1,26 @@
+digraph "CFG for 'mdir_name' function" {
+	label="CFG for 'mdir_name' function";
+
+	Node0xc2a2d60 [shape=record,label="{dirname-lgpl.c:71:|{<s0>T|<s1>F}}"];
+	Node0xc2a2d60:s0 -> Node0xc352c50;
+	Node0xc2a2d60:s1 -> Node0xc2aa240;
+	Node0xc352c50 [shape=record,label="{dirname-lgpl.c:50:}"];
+	Node0xc352c50 -> Node0xc29d680;
+	Node0xc3440f0 [shape=record,label="{dirname-lgpl.c:35:|{<s0>T|<s1>F}}"];
+	Node0xc3440f0:s0 -> Node0xc29d680;
+	Node0xc3440f0:s1 -> Node0xc2aa240;
+	Node0xc29d680 [shape=record,label="{dirname-lgpl.c:35:22|{<s0>T|<s1>F}}"];
+	Node0xc29d680:s0 -> Node0xc3440f0;
+	Node0xc29d680:s1 -> Node0xc2aa240;
+	Node0xc2aa240 [shape=record,label="{dirname-lgpl.c:73:|{<s0>T|<s1>F}}"];
+	Node0xc2aa240:s0 -> Node0xc2ac0a0;
+	Node0xc2aa240:s1 -> Node0xc2aca70;
+	Node0xc2aca70 [shape=record,label="{dirname-lgpl.c:81:|{<s0>T|<s1>F}}"];
+	Node0xc2aca70:s0 -> Node0xc2a73d0;
+	Node0xc2aca70:s1 -> Node0xc2ad760;
+	Node0xc2a73d0 [shape=record,label="{dirname-lgpl.c:83:}"];
+	Node0xc2a73d0 -> Node0xc2ad760;
+	Node0xc2ad760 [shape=record,label="{dirname-lgpl.c:73:23}"];
+	Node0xc2ad760 -> Node0xc2ac0a0;
+	Node0xc2ac0a0 [shape=record,label="{dirname-lgpl.c:86:}"];
+}

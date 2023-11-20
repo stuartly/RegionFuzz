@@ -1,0 +1,13 @@
+digraph "CFG for 'sha256_process_block' function" {
+	label="CFG for 'sha256_process_block' function";
+
+	Node0xcf9a440 [shape=record,label="{sha256.c:449:|{<s0>T|<s1>F}}"];
+	Node0xcf9a440:s0 -> Node0xd0b9ed0;
+	Node0xcf9a440:s1 -> Node0xd072e40;
+	Node0xd0b9ed0 [shape=record,label="{sha256.c:489:}"];
+	Node0xd0b9ed0 -> Node0xd073100;
+	Node0xd073100 [shape=record,label="{sha256.c:493:|{<s0>T|<s1>F}}"];
+	Node0xd073100:s0 -> Node0xd073100;
+	Node0xd073100:s1 -> Node0xd072e40;
+	Node0xd072e40 [shape=record,label="{sha256.c:575:}"];
+}

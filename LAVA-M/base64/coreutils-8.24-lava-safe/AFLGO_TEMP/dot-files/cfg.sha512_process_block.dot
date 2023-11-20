@@ -1,0 +1,13 @@
+digraph "CFG for 'sha512_process_block' function" {
+	label="CFG for 'sha512_process_block' function";
+
+	Node0xcd6b5b0 [shape=record,label="{sha512.c:481:|{<s0>T|<s1>F}}"];
+	Node0xcd6b5b0:s0 -> Node0xcd5f870;
+	Node0xcd6b5b0:s1 -> Node0xcefde50;
+	Node0xcd5f870 [shape=record,label="{sha512.c:527:}"];
+	Node0xcd5f870 -> Node0xcefe110;
+	Node0xcefe110 [shape=record,label="{sha512.c:529:|{<s0>T|<s1>F}}"];
+	Node0xcefe110:s0 -> Node0xcefe110;
+	Node0xcefe110:s1 -> Node0xcefde50;
+	Node0xcefde50 [shape=record,label="{sha512.c:627:}"];
+}

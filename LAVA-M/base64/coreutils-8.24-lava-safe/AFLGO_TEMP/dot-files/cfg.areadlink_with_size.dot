@@ -1,0 +1,36 @@
+digraph "CFG for 'areadlink_with_size' function" {
+	label="CFG for 'areadlink_with_size' function";
+
+	Node0xcb528c0 [shape=record,label="{areadlink-with-size.c:52:|{<s0>T|<s1>F}}"];
+	Node0xcb528c0:s0 -> Node0xcd1f450;
+	Node0xcb528c0:s1 -> Node0xcd1a640;
+	Node0xcd1a640 [shape=record,label="{areadlink-with-size.c:74:}"];
+	Node0xcd1a640 -> Node0xcd19e50;
+	Node0xcd19e50 [shape=record,label="{areadlink-with-size.c:64:|{<s0>T|<s1>F}}"];
+	Node0xcd19e50:s0 -> Node0xcd1b6c0;
+	Node0xcd19e50:s1 -> Node0xcd1b670;
+	Node0xcd1b6c0 [shape=record,label="{areadlink-with-size.c:79:|{<s0>T|<s1>F}}"];
+	Node0xcd1b6c0:s0 -> Node0xcd1b670;
+	Node0xcd1b6c0:s1 -> Node0xcd1b620;
+	Node0xcd1b620 [shape=record,label="{areadlink-with-size.c:81:}"];
+	Node0xcd1b620 -> Node0xcd1f450;
+	Node0xcd1b670 [shape=record,label="{areadlink-with-size.c:87:|{<s0>T|<s1>F}}"];
+	Node0xcd1b670:s0 -> Node0xcd1d050;
+	Node0xcd1b670:s1 -> Node0xcd1d450;
+	Node0xcd1d050 [shape=record,label="{areadlink-with-size.c:89:}"];
+	Node0xcd1d050 -> Node0xcd1f450;
+	Node0xcd1d450 [shape=record,label="{areadlink-with-size.c:93:|{<s0>T|<s1>F}}"];
+	Node0xcd1d450:s0 -> Node0xcd1c690;
+	Node0xcd1d450:s1 -> Node0xcd1c730;
+	Node0xcd1c690 [shape=record,label="{areadlink-with-size.c:95:}"];
+	Node0xcd1c690 -> Node0xcd1f990;
+	Node0xcd1c730 [shape=record,label="{areadlink-with-size.c:96:|{<s0>T|<s1>F}}"];
+	Node0xcd1c730:s0 -> Node0xcd1f990;
+	Node0xcd1c730:s1 -> Node0xcd182b0;
+	Node0xcd182b0 [shape=record,label="{areadlink-with-size.c:100:}"];
+	Node0xcd182b0 -> Node0xcd1f450;
+	Node0xcd1f990 [shape=record,label="{areadlink-with-size.c:64:96|{<s0>T|<s1>F}}"];
+	Node0xcd1f990:s0 -> Node0xcd1f450;
+	Node0xcd1f990:s1 -> Node0xcd19e50;
+	Node0xcd1f450 [shape=record,label="{areadlink-with-size.c:64:97}"];
+}

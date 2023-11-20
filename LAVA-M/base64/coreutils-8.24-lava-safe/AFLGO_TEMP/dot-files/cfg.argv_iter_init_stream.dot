@@ -1,0 +1,10 @@
+digraph "CFG for 'argv_iter_init_stream' function" {
+	label="CFG for 'argv_iter_init_stream' function";
+
+	Node0xd46bee0 [shape=record,label="{argv-iter.c:54:|{<s0>T|<s1>F}}"];
+	Node0xd46bee0:s0 -> Node0xd470560;
+	Node0xd46bee0:s1 -> Node0xd469c10;
+	Node0xd469c10 [shape=record,label="{argv-iter.c:56:}"];
+	Node0xd469c10 -> Node0xd470560;
+	Node0xd470560 [shape=record,label="{argv-iter.c:66:}"];
+}

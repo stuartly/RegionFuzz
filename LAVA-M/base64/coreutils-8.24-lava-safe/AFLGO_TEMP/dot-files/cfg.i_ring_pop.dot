@@ -1,0 +1,16 @@
+digraph "CFG for 'i_ring_pop' function" {
+	label="CFG for 'i_ring_pop' function";
+
+	Node0xc904ea0 [shape=record,label="{i-ring.c:56:|{<s0>T|<s1>F}}"];
+	Node0xc904ea0:s0 -> Node0xc906540;
+	Node0xc904ea0:s1 -> Node0xc9064f0;
+	Node0xc9064f0 [shape=record,label="{i-ring.c:60:}"];
+	Node0xc906540 [shape=record,label="{i-ring.c:61:|{<s0>T|<s1>F}}"];
+	Node0xc906540:s0 -> Node0xc90d3e0;
+	Node0xc906540:s1 -> Node0xc90e3f0;
+	Node0xc90d3e0 [shape=record,label="{i-ring.c:64:}"];
+	Node0xc90d3e0 -> Node0xc90e3a0;
+	Node0xc90e3f0 [shape=record,label="{i-ring.c:66:}"];
+	Node0xc90e3f0 -> Node0xc90e3a0;
+	Node0xc90e3a0 [shape=record,label="{i-ring.c:67:}"];
+}

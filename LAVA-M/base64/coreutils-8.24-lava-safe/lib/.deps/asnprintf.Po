@@ -1,0 +1,14 @@
+lib/asnprintf.o: lib/asnprintf.c lib/config.h lib/vasnprintf.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdarg.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h \
+  /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h
+
+lib/config.h:
+
+lib/vasnprintf.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdarg.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stddef.h:
+
+/home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/__stddef_max_align_t.h:

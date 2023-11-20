@@ -1,0 +1,5 @@
+digraph "CFG for 'ino_compare' function" {
+	label="CFG for 'ino_compare' function";
+
+	Node0xd849220 [shape=record,label="{ino-map.c:73:}"];
+}

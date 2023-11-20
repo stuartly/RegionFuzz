@@ -1,0 +1,5 @@
+digraph "CFG for 'rotr64' function" {
+	label="CFG for 'rotr64' function";
+
+	Node0xc76a250 [shape=record,label="{bitrotate.h:48:}"];
+}

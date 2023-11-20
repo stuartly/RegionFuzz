@@ -1,0 +1,9 @@
+digraph "CFG for 'dir_name' function" {
+	label="CFG for 'dir_name' function";
+
+	Node0xd6417c0 [shape=record,label="{dirname.c:32:|{<s0>T|<s1>F}}"];
+	Node0xd6417c0:s0 -> Node0xd66fb00;
+	Node0xd6417c0:s1 -> Node0xd66fb50;
+	Node0xd66fb00 [shape=record,label="{dirname.c:36:}"];
+	Node0xd66fb50 [shape=record,label="{dirname.c:37:}"];
+}

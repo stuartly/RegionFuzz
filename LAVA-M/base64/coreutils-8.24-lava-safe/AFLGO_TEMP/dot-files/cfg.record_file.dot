@@ -1,0 +1,17 @@
+digraph "CFG for 'record_file' function" {
+	label="CFG for 'record_file' function";
+
+	Node0xdcd4330 [shape=record,label="{file-set.c:29:|{<s0>T|<s1>F}}"];
+	Node0xdcd4330:s0 -> Node0xdce4170;
+	Node0xdcd4330:s1 -> Node0xdce2420;
+	Node0xdce2420 [shape=record,label="{file-set.c:36:|{<s0>T|<s1>F}}"];
+	Node0xdce2420:s0 -> Node0xdce8440;
+	Node0xdce2420:s1 -> Node0xdce8490;
+	Node0xdce8440 [shape=record,label="{file-set.c:46:}"];
+	Node0xdce8490 [shape=record,label="{file-set.c:49:|{<s0>T|<s1>F}}"];
+	Node0xdce8490:s0 -> Node0xdce4170;
+	Node0xdce8490:s1 -> Node0xdce7a40;
+	Node0xdce7a40 [shape=record,label="{file-set.c:53:}"];
+	Node0xdce7a40 -> Node0xdce4170;
+	Node0xdce4170 [shape=record,label="{file-set.c:56:}"];
+}

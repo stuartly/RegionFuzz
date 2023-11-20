@@ -1,0 +1,5 @@
+digraph "CFG for 'sigabrt_no_core' function" {
+	label="CFG for 'sigabrt_no_core' function";
+
+	Node0xdb69330 [shape=record,label="{conftest.c:549:}"];
+}

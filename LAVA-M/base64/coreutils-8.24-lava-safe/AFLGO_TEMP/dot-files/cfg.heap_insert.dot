@@ -1,0 +1,34 @@
+digraph "CFG for 'heap_insert' function" {
+	label="CFG for 'heap_insert' function";
+
+	Node0xd7df810 [shape=record,label="{heap.c:79:|{<s0>T|<s1>F}}"];
+	Node0xd7df810:s0 -> Node0xd801080;
+	Node0xd7df810:s1 -> Node0xd7e6530;
+	Node0xd801080 [shape=record,label="{heap.c:85:}"];
+	Node0xd801080 -> Node0xd7e0d50;
+	Node0xd7e6530 [shape=record,label="{heap.c:82:|{<s0>T|<s1>F}}"];
+	Node0xd7e6530:s0 -> Node0xd8666d0;
+	Node0xd7e6530:s1 -> Node0xd6c1680;
+	Node0xd8666d0 [shape=record,label="{xalloc.h:185:}"];
+	Node0xd8666d0 -> Node0xd8aaa90;
+	Node0xd6c1680 [shape=record,label="{xalloc.h:203:|{<s0>T|<s1>F}}"];
+	Node0xd6c1680:s0 -> Node0xd86ca20;
+	Node0xd6c1680:s1 -> Node0xd89bd10;
+	Node0xd89bd10 [shape=record,label="{xalloc.h:204:}"];
+	Node0xd86ca20 [shape=record,label="{xalloc.h:205:}"];
+	Node0xd86ca20 -> Node0xd8aaa90;
+	Node0xd8aaa90 [shape=record,label="{xalloc.h:181:}"];
+	Node0xd8aaa90 -> Node0xd7e0d50;
+	Node0xd7e0d50 [shape=record,label="{heap.c:85:20|{<s0>T|<s1>F}}"];
+	Node0xd7e0d50:s0 -> Node0xd8a82f0;
+	Node0xd7e0d50:s1 -> Node0xd7f5250;
+	Node0xd7f5250 [shape=record,label="{heap.c:144:}"];
+	Node0xd7f5250 -> Node0xd868520;
+	Node0xd868520 [shape=record,label="{heap.c:141:|{<s0>T|<s1>F}}"];
+	Node0xd868520:s0 -> Node0xd89ef60;
+	Node0xd868520:s1 -> Node0xd8a82f0;
+	Node0xd89ef60 [shape=record,label="{heap.c:146:|{<s0>T|<s1>F}}"];
+	Node0xd89ef60:s0 -> Node0xd8a82f0;
+	Node0xd89ef60:s1 -> Node0xd868520;
+	Node0xd8a82f0 [shape=record,label="{heap.c:150:}"];
+}

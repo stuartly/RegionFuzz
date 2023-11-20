@@ -1,0 +1,5 @@
+digraph "CFG for 'heap_free' function" {
+	label="CFG for 'heap_free' function";
+
+	Node0xd6e8270 [shape=record,label="{heap.c:70:}"];
+}

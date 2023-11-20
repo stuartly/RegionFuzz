@@ -1,0 +1,5 @@
+digraph "CFG for 'filemodestring' function" {
+	label="CFG for 'filemodestring' function";
+
+	Node0xcf399e0 [shape=record,label="{filemode.c:166:}"];
+}

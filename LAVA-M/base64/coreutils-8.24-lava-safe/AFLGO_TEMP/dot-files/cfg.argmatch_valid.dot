@@ -1,0 +1,30 @@
+digraph "CFG for 'argmatch_valid' function" {
+	label="CFG for 'argmatch_valid' function";
+
+	Node0xc50e410 [shape=record,label="{argmatch.c:145:|{<s0>T|<s1>F}}"];
+	Node0xc50e410:s0 -> Node0xc5d3a60;
+	Node0xc50e410:s1 -> Node0xc5a8220;
+	Node0xc5a8220 [shape=record,label="{argmatch.c:155:}"];
+	Node0xc5a8220 -> Node0xc38ee20;
+	Node0xc38ee20 [shape=record,label="{argmatch.c:148:|{<s0>T|<s1>F}}"];
+	Node0xc38ee20:s0 -> Node0xc5d4e70;
+	Node0xc38ee20:s1 -> Node0xc5d4fa0;
+	Node0xc5d4fa0 [shape=record,label="{argmatch.c:156:|{<s0>T|<s1>F}}"];
+	Node0xc5d4fa0:s0 -> Node0xc5d4f30;
+	Node0xc5d4fa0:s1 -> Node0xc5d4e70;
+	Node0xc5d4e70 [shape=record,label="{argmatch.c:158:}"];
+	Node0xc5d4e70 -> Node0xc38edd0;
+	Node0xc5d4f30 [shape=record,label="{argmatch.c:163:}"];
+	Node0xc5d4f30 -> Node0xc38edd0;
+	Node0xc38edd0 [shape=record,label="{argmatch.c:149:|{<s0>T|<s1>F}}"];
+	Node0xc38edd0:s0 -> Node0xc5d3a60;
+	Node0xc38edd0:s1 -> Node0xc38ee20;
+	Node0xc5d3a60 [shape=record,label="{argmatch.c:165:|{<s0>T|<s1>F}}"];
+	Node0xc5d3a60:s0 -> Node0xc5c6fd0["];
+	Node0xc5d3a60:s1 -> Node0xc5c5380["];
+	Node0xc5c5380 [shape=record,label="{cond.true.i}"];
+	Node0xc5c5380 -> Node0xc68c520;
+	Node0xc5c6fd0 [shape=record,label="{cond.false.i}"];
+	Node0xc5c6fd0 -> Node0xc68c520;
+	Node0xc68c520 [shape=record,label="{argmatch.c:166:}"];
+}

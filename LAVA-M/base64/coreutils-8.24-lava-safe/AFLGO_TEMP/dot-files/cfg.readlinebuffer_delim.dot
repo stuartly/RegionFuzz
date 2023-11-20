@@ -1,0 +1,37 @@
+digraph "CFG for 'readlinebuffer_delim' function" {
+	label="CFG for 'readlinebuffer_delim' function";
+
+	Node0xd4e1200 [shape=record,label="{linebuffer.c:59:|{<s0>T|<s1>F}}"];
+	Node0xd4e1200:s0 -> Node0xd4ec340;
+	Node0xd4e1200:s1 -> Node0xd3aa080;
+	Node0xd4ec340 [shape=record,label="{linebuffer.c:65:}"];
+	Node0xd4ec340 -> Node0xd4ed2a0;
+	Node0xd4ed2a0 [shape=record,label="{linebuffer.c:65:68|{<s0>T|<s1>F}}"];
+	Node0xd4ed2a0:s0 -> Node0xd4e9300["];
+	Node0xd4ed2a0:s1 -> Node0xd5905d0["];
+	Node0xd4e9300 [shape=record,label="{linebuffer.c:62:}"];
+	Node0xd4e9300 -> Node0xd4edbc0;
+	Node0xd5905d0 [shape=record,label="{linebuffer.c:62:69|{<s0>T|<s1>F}}"];
+	Node0xd5905d0:s0 -> Node0xd4eda90;
+	Node0xd5905d0:s1 -> Node0xd4edbc0;
+	Node0xd4eda90 [shape=record,label="{linebuffer.c:75:|{<s0>T|<s1>F}}"];
+	Node0xd4eda90:s0 -> Node0xd3aa080;
+	Node0xd4eda90:s1 -> Node0xd4d4ea0;
+	Node0xd4d4ea0 [shape=record,label="{linebuffer.c:75:70|{<s0>T|<s1>F}}"];
+	Node0xd4d4ea0:s0 -> Node0xd4eb560;
+	Node0xd4d4ea0:s1 -> Node0xd3aa080;
+	Node0xd4eb560 [shape=record,label="{linebuffer.c:77:|{<s0>T|<s1>F}}"];
+	Node0xd4eb560:s0 -> Node0xd4ecb30;
+	Node0xd4eb560:s1 -> Node0xd4edbc0;
+	Node0xd4edbc0 [shape=record,label="{linebuffer.c:62:71|{<s0>T|<s1>F}}"];
+	Node0xd4edbc0:s0 -> Node0xd4efda0;
+	Node0xd4edbc0:s1 -> Node0xd4efdf0;
+	Node0xd4efda0 [shape=record,label="{linebuffer.c:83:}"];
+	Node0xd4efda0 -> Node0xd4efdf0;
+	Node0xd4efdf0 [shape=record,label="{linebuffer.c:65:72|{<s0>T|<s1>F}}"];
+	Node0xd4efdf0:s0 -> Node0xd4ecb30;
+	Node0xd4efdf0:s1 -> Node0xd4ed2a0;
+	Node0xd4ecb30 [shape=record,label="{linebuffer.c:64:}"];
+	Node0xd4ecb30 -> Node0xd3aa080;
+	Node0xd3aa080 [shape=record,label="{linebuffer.c:95:}"];
+}

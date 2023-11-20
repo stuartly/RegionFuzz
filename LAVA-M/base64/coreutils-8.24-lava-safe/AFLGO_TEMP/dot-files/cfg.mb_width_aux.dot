@@ -1,0 +1,10 @@
+digraph "CFG for 'mb_width_aux' function" {
+	label="CFG for 'mb_width_aux' function";
+
+	Node0xe1a3870 [shape=record,label="{mbchar.h:247:|{<s0>T|<s1>F}}"];
+	Node0xe1a3870:s0 -> Node0xe1adeb0;
+	Node0xe1a3870:s1 -> Node0xe1ade30;
+	Node0xe1ade30 [shape=record,label="{mbchar.h:252:}"];
+	Node0xe1ade30 -> Node0xe1adeb0;
+	Node0xe1adeb0 [shape=record,label="{mbchar.h:252:6}"];
+}
