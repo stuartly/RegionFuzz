@@ -28,8 +28,8 @@ make && make install
 # Demo
 
 ```
-cd LAVA-M/base64
-bash Run.sh
+cd LAVA-M/base64/ccoreutils-8.24-lava-safe
+bash Run-Depth.sh
 
 ```
 
