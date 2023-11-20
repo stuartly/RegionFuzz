@@ -46,7 +46,7 @@ src/uname.o: src/uname.c lib/config.h lib/stdio.h /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/asm/param.h \
   /usr/include/asm-generic/param.h \
   /usr/include/x86_64-linux-gnu/sys/sysctl.h /usr/include/linux/sysctl.h \
-  /usr/include/linux/kernel.h /usr/include/linux/types.h \
+  /usr/include/linux/const.h /usr/include/linux/types.h \
   /usr/include/x86_64-linux-gnu/bits/sysctl.h src/system.h lib/alloca.h \
   lib/sys/stat.h /usr/include/x86_64-linux-gnu/bits/timex.h \
   /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/sys/stat.h \
@@ -218,7 +218,7 @@ lib/signal.h:
 
 /usr/include/linux/sysctl.h:
 
-/usr/include/linux/kernel.h:
+/usr/include/linux/const.h:
 
 /usr/include/linux/types.h:
 

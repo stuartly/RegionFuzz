@@ -53,7 +53,7 @@ lib/physmem.o: lib/physmem.c lib/config.h lib/physmem.h lib/unistd.h \
   /usr/include/x86_64-linux-gnu/asm/param.h \
   /usr/include/asm-generic/param.h \
   /usr/include/x86_64-linux-gnu/sys/sysctl.h /usr/include/linux/sysctl.h \
-  /usr/include/x86_64-linux-gnu/bits/sysctl.h
+  /usr/include/linux/const.h /usr/include/x86_64-linux-gnu/bits/sysctl.h
 
 lib/config.h:
 
@@ -200,5 +200,7 @@ lib/signal.h:
 /usr/include/x86_64-linux-gnu/sys/sysctl.h:
 
 /usr/include/linux/sysctl.h:
+
+/usr/include/linux/const.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysctl.h:

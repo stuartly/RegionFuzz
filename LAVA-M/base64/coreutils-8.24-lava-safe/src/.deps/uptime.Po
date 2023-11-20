@@ -83,7 +83,7 @@ src/uptime.o: src/uptime.c lib/config.h /usr/include/getopt.h lib/ctype.h \
   lib/dosname.h lib/openat.h lib/closein.h lib/closeout.h \
   lib/version-etc.h lib/propername.h lib/progname.h lib/intprops.h \
   lib/inttostr.h /usr/include/x86_64-linux-gnu/sys/sysctl.h \
-  /usr/include/linux/sysctl.h /usr/include/linux/kernel.h \
+  /usr/include/linux/sysctl.h /usr/include/linux/const.h \
   /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/bits/sysctl.h \
   lib/c-strtod.h lib/error.h lib/long-options.h lib/quote.h \
   lib/readutmp.h /usr/include/utmp.h \
@@ -367,7 +367,7 @@ lib/inttostr.h:
 
 /usr/include/linux/sysctl.h:
 
-/usr/include/linux/kernel.h:
+/usr/include/linux/const.h:
 
 /usr/include/linux/types.h:
 

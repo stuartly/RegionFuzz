@@ -51,7 +51,7 @@ lib/nproc.o: lib/nproc.c lib/config.h lib/nproc.h lib/stdlib.h \
   /usr/include/x86_64-linux-gnu/asm/param.h \
   /usr/include/asm-generic/param.h \
   /usr/include/x86_64-linux-gnu/sys/sysctl.h /usr/include/linux/sysctl.h \
-  /usr/include/linux/kernel.h /usr/include/linux/types.h \
+  /usr/include/linux/const.h /usr/include/linux/types.h \
   /usr/include/x86_64-linux-gnu/bits/sysctl.h lib/c-ctype.h \
   /home/stly/Documents/binutils-gdb/build/installed/lib/clang/5.0.0/include/stdbool.h
 
@@ -195,7 +195,7 @@ lib/signal.h:
 
 /usr/include/linux/sysctl.h:
 
-/usr/include/linux/kernel.h:
+/usr/include/linux/const.h:
 
 /usr/include/linux/types.h:
 

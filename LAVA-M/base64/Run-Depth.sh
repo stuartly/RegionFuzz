@@ -1,7 +1,7 @@
 rm -rf BB*.txt
 rm -rf config.cache
 make clean
-export TAFLPath="/home/cloud/Demo/Regionfuzz"
+export TAFLPath="/home/stly/Documents/Demo/RegionFuzz/"
 
 
 
@@ -34,6 +34,6 @@ echo "running fuzzers...\n"
 
 
 
-gnome-terminal -e "../afl-fuzz -i fuzz_seed -o out-Depth -d -G BBDepth ./installed-Depth/bin/bison @@"
+${TAFLPath}/afl-fuzz -i inputs -o out-Depth -d -G BBDepth ./installed-Depth/bin/base64 -d @@
 
 

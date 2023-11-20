@@ -1,4 +1,4 @@
-@set UPDATED 8 August 2018
-@set UPDATED-MONTH August 2018
+@set UPDATED 20 November 2023
+@set UPDATED-MONTH November 2023
 @set EDITION 8.24
 @set VERSION 8.24
