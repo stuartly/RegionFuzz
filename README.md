@@ -46,5 +46,14 @@ bash Run-Depth.sh
   publisher={Springer}
 }
 
+@inproceedings{situ2019energy,
+  title={Energy distribution matters in greybox fuzzing},
+  author={Situ, Lingyun and Wang, Linzhang and Li, Xuandong and Guan, Le and Zhang, Wenhui and Liu, Peng},
+  booktitle={2019 IEEE/ACM 41st International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)},
+  pages={270--271},
+  year={2019},
+  organization={IEEE}
+}
+
 
 ```
